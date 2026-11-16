@@ -1,0 +1,44 @@
+name: Actualizar datos del BOE
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: actualizar-datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pasar los tests
+        run: |
+          pip install pytest
+          python -m pytest -q
+      - name: Descargar convocatorias y exámenes
+        run: python -m oposiciones.actualizar convocatorias --dias 7
+        working-directory: scripts
+      - name: Descargar normas (solo las que han cambiado)
+        run: python -m oposiciones.actualizar normas
+        working-directory: scripts
+      - name: Guardar cambios
+        run: |
+          git config user.name "robot-oposiciones"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/data
+          git diff --cached --quiet || git commit -m "Actualizar datos del BOE"
+          git push
+      - name: Volver a publicar la web
+        run: gh workflow run publicar.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
