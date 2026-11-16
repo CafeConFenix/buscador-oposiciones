@@ -2,8 +2,8 @@ name: Actualizar datos del BOE
 
 on:
   schedule:
-    - cron: "30 6 * * *"
-  workflow_dispatch:
+    - cron: "30 6 * * *"   # cada día, sobre las 7:30 (hora de Madrid en invierno)
+  workflow_dispatch:         # también se puede lanzar a mano desde la pestaña Actions
 
 permissions:
   contents: write
@@ -31,6 +31,13 @@ jobs:
       - name: Descargar normas (solo las que han cambiado)
         run: python -m oposiciones.actualizar normas
         working-directory: scripts
+      - name: Extraer el temario oficial de las convocatorias
+        run: python -m oposiciones.actualizar temarios
+        working-directory: scripts
+      - name: Comprobar que los enlaces siguen funcionando
+        run: python -m oposiciones.actualizar enlaces
+        working-directory: scripts
+        continue-on-error: true
       - name: Guardar cambios
         run: |
           git config user.name "robot-oposiciones"
@@ -39,6 +46,7 @@ jobs:
           git diff --cached --quiet || git commit -m "Actualizar datos del BOE"
           git push
       - name: Volver a publicar la web
+        # Un push hecho por el robot no lanza otros workflows, así que se pide la publicación expresamente.
         run: gh workflow run publicar.yml
         env:
           GH_TOKEN: ${{ github.token }}
