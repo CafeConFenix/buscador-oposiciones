@@ -1,4 +1,4 @@
-import { buscarOposiciones, buscarArticulos, dividirResaltado, convocatoriasDe, esConsultaDeArticulo } from "./busqueda.js";
+import { buscarOposiciones, buscarArticulos, dividirResaltado, convocatoriasDe, esConsultaDeArticulo, urlPdfBoe, enlacesApuntes, convocatoriasDeComunidad } from "./busqueda.js";
 import { construirEventos, agruparPorMes, filtrarEventos, formatearFecha, formatearDia } from "./calendario.js";
 
 const principal = document.getElementById("principal");
@@ -51,6 +51,22 @@ function fijarParam(params, clave, valor, vacio = "") {
   guardarParams(params);
 }
 
+// Estructura común: una banda de color arriba (título y buscador) y el contenido debajo.
+function pagina(banda, cuerpo, { clase = "", estilo = "" } = {}) {
+  principal.replaceChildren(
+    h("div", { class: "banda", style: estilo || null }, h("div", { class: "interior" }, ...banda.filter(Boolean))),
+    h("div", { class: `interior cuerpo ${clase}`.trim(), style: estilo || null }, ...cuerpo.filter(Boolean)),
+  );
+}
+
+// Cada área tiene su color de subrayador, igual en toda la web.
+const COLORES_AREA = {
+  "Administración General del Estado": 0, "Educación": 1, "Defensa": 2, "Administración Autonómica": 3,
+  "Administración Local": 4, "Correos": 5, "Hacienda": 6, "Justicia": 7, "Sanidad": 8, "Seguridad": 9, "Seguridad Social": 10,
+};
+const colorDe = (area = "") =>
+  `--c: var(--s${COLORES_AREA[area] ?? ([...area].reduce((n, c) => n + c.charCodeAt(0), 0) % 11)})`;
+
 const hoyISO = () => new Date().toISOString().slice(0, 10);
 const restarDias = (iso, dias) => new Date(Date.parse(iso) - dias * 864e5).toISOString().slice(0, 10);
 
@@ -83,9 +99,11 @@ const guardado = {
 function vistaOposiciones(d, params) {
   let consulta = params.get("q") ?? "";
   let ambito = params.get("ambito") ?? "todas";
+  let area = params.get("area") ?? "";
 
   const estado = h("p", { class: "estado", "aria-live": "polite" });
   const lista = h("ul", { class: "resultados" });
+  const listaAreas = h("div", { class: "areas-lista", role: "group", "aria-label": "Filtrar por área" });
   const entrada = h("input", {
     id: "q", type: "search", name: "q", value: consulta, autocomplete: "off", spellcheck: "false",
     enterkeyhint: "search", placeholder: "Auxiliar administrativo, Policía Nacional, TCAE…",
@@ -102,15 +120,34 @@ function vistaOposiciones(d, params) {
     ]),
   );
 
+  const areas = [...new Set(d.oposiciones.map((o) => o.area))].sort((a, b) => a.localeCompare(b, "es"));
+  const deAmbito = () => (ambito === "todas" ? d.oposiciones : d.oposiciones.filter((o) => o.ambito === ambito));
+
+  function botonArea(valor, texto, n) {
+    return h("button", {
+      type: "button", class: "area", style: valor ? colorDe(valor) : "--c: var(--s0)", "aria-pressed": String(area === valor),
+      onclick: () => { area = valor; fijarParam(params, "area", valor); pintar(); },
+    }, h("span", { class: "trazo", "aria-hidden": "true" }), h("span", { class: "area-nombre" }, texto), h("span", { class: "area-n" }, String(n)));
+  }
+
+  function pintarAreas(base) {
+    const cuenta = (a) => base.filter((o) => o.area === a).length;
+    if (area && !cuenta(area)) { area = ""; fijarParam(params, "area", ""); }
+    listaAreas.replaceChildren(botonArea("", "Todas las áreas", base.length),
+      ...areas.filter((a) => cuenta(a) > 0).map((a) => botonArea(a, a, cuenta(a))));
+  }
+
   function pintar() {
-    const base = ambito === "todas" ? d.oposiciones : d.oposiciones.filter((o) => o.ambito === ambito);
-    const encontradas = buscarOposiciones(base, consulta);
+    const base = deAmbito();
+    pintarAreas(base);
+    const encontradas = buscarOposiciones(area ? base.filter((o) => o.area === area) : base, consulta);
     const visibles = encontradas.slice(0, 60);
     lista.replaceChildren(...visibles.map((o) => filaOposicion(o, consulta, d, encontradas.length === 1)));
+    const donde = area ? ` en ${area}` : "";
     if (!d.oposiciones.length) estado.textContent = "No se han podido cargar las oposiciones.";
-    else if (!consulta.trim()) estado.textContent = `${encontradas.length} oposiciones en el catálogo. Escribe arriba para filtrar.`;
-    else if (!encontradas.length) estado.textContent = `Ninguna oposición coincide con «${consulta.trim()}».`;
-    else estado.textContent = `${encontradas.length} ${encontradas.length === 1 ? "resultado" : "resultados"} para «${consulta.trim()}».`;
+    else if (!consulta.trim()) estado.textContent = `${encontradas.length} oposiciones${donde}.`;
+    else if (!encontradas.length) estado.textContent = `Ninguna oposición coincide con «${consulta.trim()}»${donde}.`;
+    else estado.textContent = `${encontradas.length} ${encontradas.length === 1 ? "resultado" : "resultados"} para «${consulta.trim()}»${donde}.`;
     vacio.hidden = encontradas.length > 0 || !consulta.trim();
   }
 
@@ -120,23 +157,23 @@ function vistaOposiciones(d, params) {
 
   const miId = guardado.leer("mi-oposicion", null);
   const mia = d.oposiciones.find((o) => o.id === miId);
-  const areas = [...new Set(d.oposiciones.map((o) => o.area))].sort((a, b) => a.localeCompare(b, "es"));
 
-  principal.replaceChildren(...[
+  pagina([
     h("h1", {}, "¿Qué oposición preparas?"),
-    h("label", { class: "buscador", for: "q" },
-      h("span", { class: "solo-lectores" }, "Buscar oposición"), entrada),
-    mia && h("p", { class: "mia" }, "Tu oposición: ", h("a", { href: `#/oposicion/${mia.id}` }, mia.nombre)),
+    h("p", { class: "intro" }, "Temario oficial, normas en PDF, libros y fechas de examen de todas las oposiciones de España."),
+    h("label", { class: "buscador", for: "q" }, h("span", { class: "solo-lectores" }, "Buscar oposición"), entrada),
     filtros,
-    h("p", { class: "etiqueta-areas" }, "O explora por área"),
-    h("div", { class: "areas" },
-      areas.map((a) => h("button", { type: "button", class: "chip", onclick: () => { entrada.value = a; consulta = a; fijarParam(params, "q", a); pintar(); entrada.focus(); } }, a))),
-    estado, lista, vacio,
-    h("h2", {}, "Normas que sirven para casi todas"),
-    h("p", {}, "Búscalas artículo a artículo, con el texto consolidado del BOE."),
-    h("div", { class: "troncales" },
-      d.normas.slice(0, 8).map((n) => h("a", { href: `#/normas?norma=${n.slug}` }, nombreCorto(n.nombre)))),
-  ].filter(Boolean));
+  ], [
+    h("aside", { class: "lateral" }, h("h2", { class: "lateral-titulo" }, "Áreas"), listaAreas),
+    h("div", { class: "columna" },
+      mia && h("p", { class: "mia" }, "Tu oposición: ", h("a", { href: `#/oposicion/${mia.id}` }, mia.nombre)),
+      estado, lista, vacio,
+      h("h2", {}, "Normas que sirven para casi todas"),
+      h("p", { class: "nota" }, "Búscalas artículo a artículo o descárgalas enteras en PDF."),
+      h("div", { class: "troncales" },
+        d.normas.slice(0, 8).map((n) => h("a", { href: `#/normas?norma=${n.slug}` }, nombreCorto(n.nombre)))),
+    ),
+  ], { clase: "con-lateral" });
   pintar();
 }
 
@@ -147,7 +184,7 @@ function filaOposicion(o, consulta, d, abrir) {
   const anuncios = convocatoriasDe(o, d.convocatorias).slice(0, 5);
   const urlLibros = `https://www.google.com/search?tbm=bks&q=${encodeURIComponent(`${o.nombre} temario oposiciones`)}`;
 
-  return h("li", {},
+  return h("li", { style: colorDe(o.area) },
     h("details", { open: abrir },
       h("summary", {},
         h("span", { class: "nombre" }, marcar(o.nombre, consulta)),
@@ -243,7 +280,9 @@ function vistaOposicion(d, params, id) {
               e.target.checked ? hechos.add(tema.numero) : hechos.delete(tema.numero);
               guardado.escribir(clave, [...hechos]); actualizar();
             } }),
-            h("span", { class: "num" }, String(tema.numero)), h("span", {}, tema.titulo))))),
+            h("span", { class: "num" }, String(tema.numero)), h("span", {}, tema.titulo)),
+          h("details", { class: "apuntes" }, h("summary", {}, "Buscar apuntes de este tema"),
+            h("ul", {}, enlacesApuntes(tema.titulo, o.nombre).map((e) => h("li", {}, h("a", { href: e.url, ...ENLACE_EXT }, e.texto)))))))),
       );
     });
     return [nodo];
@@ -252,7 +291,9 @@ function vistaOposicion(d, params, id) {
   function panelNormas() {
     const lista = (o.normas ?? []).filter((s) => nombresNorma.has(s));
     return [h("p", { class: "nota" }, "Busca artículo a artículo en el texto consolidado del BOE."),
-      h("ul", { class: "enlaces" }, lista.map((s) => h("li", {}, h("a", { href: `#/normas?norma=${s}` }, nombresNorma.get(s).nombre))))];
+      h("ul", { class: "enlaces" }, lista.map((s) => h("li", {},
+        h("a", { href: `#/normas?norma=${s}` }, nombresNorma.get(s).nombre), " · ",
+        h("a", { href: urlPdfBoe(nombresNorma.get(s).id), rel: "noopener" }, "PDF"))))];
   }
 
   function panelRecursos() {
@@ -290,12 +331,12 @@ function vistaOposicion(d, params, id) {
   }
 
   document.title = `${o.nombre} | Oposiciones de España`;
-  principal.replaceChildren(
+  pagina([
     h("p", { class: "migas" }, h("a", { href: "#/" }, "← Todas las oposiciones")),
     h("h1", {}, o.nombre),
-    h("p", { class: "meta" }, [o.grupo ? `Grupo ${o.grupo}` : null, ambitoTexto(o.ambito), o.area].filter(Boolean).join(" · ")),
-    botonMia, barra, cuerpo,
-  );
+    h("p", { class: "meta" }, o.grupo && h("span", { class: "grupo" }, `Grupo ${o.grupo}`), h("span", {}, ambitoTexto(o.ambito)), h("span", {}, o.area)),
+    botonMia,
+  ], [barra, cuerpo], { estilo: colorDe(o.area) });
   pintarBoton();
   pintar();
 }
@@ -318,16 +359,20 @@ function vistaComunidades(d, params) {
       ["Sanidad", c.sanidad.nombre, c.sanidad.url],
       ["Educación", "Oposiciones docentes", c.educacion],
     ].filter(([, , url]) => enlaceVivo(d, url));
+    const anuncios = convocatoriasDeComunidad(c.id, d.convocatorias).slice(0, 12);
     ficha.replaceChildren(h("h2", {}, c.nombre),
       h("ul", { class: "enlaces grande" }, filas.map(([t, n, url]) => h("li", {}, h("span", { class: "nota" }, t), h("a", { href: url, ...ENLACE_EXT }, n)))),
-      h("p", { class: "nota" }, "Cada comunidad publica sus convocatorias en su propio boletín: ahí están las bases y el temario de tu oposición."));
+      h("h3", {}, "Últimas convocatorias publicadas en el BOE"),
+      anuncios.length
+        ? h("ul", { class: "enlaces" }, anuncios.map((a) => h("li", {}, h("span", { class: "fecha" }, formatearFecha(a.fecha)), h("a", { href: a.url_html || a.url_pdf, ...ENLACE_EXT }, resumirTitulo(a.titulo)))))
+        : h("p", { class: "nota" }, "Ahora mismo no hay anuncios de esta comunidad en el BOE."),
+      h("p", { class: "nota" }, "Cada comunidad publica la mayoría de sus convocatorias en su propio boletín: ahí están las bases y el temario de tu oposición."));
   }
-  principal.replaceChildren(
+  pagina([
     h("h1", {}, "Tu comunidad autónoma"),
-    h("p", {}, "Boletín oficial, empleo público, sanidad y educación de cada comunidad, para encontrar las convocatorias que no salen en el BOE."),
+    h("p", { class: "intro" }, "Convocatorias recientes, boletín oficial, empleo público, sanidad y educación de cada comunidad."),
     h("div", { class: "campo" }, h("label", { for: "comunidad" }, h("span", {}, "Comunidad")), selector),
-    ficha,
-  );
+  ], [ficha]);
   pintar();
 }
 
@@ -368,6 +413,7 @@ function vistaNormas(d, params) {
     if (entradaNorma.slug !== slug && slug) return; // el usuario cambió de norma mientras cargaba
 
     cabeceraNorma.replaceChildren("Texto consolidado del BOE, informativo y sin valor jurídico. ",
+      h("a", { class: "boton", href: urlPdfBoe(entradaNorma.id) || urlBoe, rel: "noopener", download: "" }, "Descargar entera en PDF"), " ",
       h("a", { href: urlBoe, rel: "noopener" }, "Abrir en el BOE"));
 
     if (!norma) {
@@ -390,12 +436,18 @@ function vistaNormas(d, params) {
       : `Nada para «${consulta.trim()}» en esta norma.`;
   }
 
-  principal.replaceChildren(
+  pagina([
     h("h1", {}, "Normas y documentos troncales"),
+    h("p", { class: "intro" }, "La Constitución y las leyes que más se preguntan: búscalas artículo a artículo o descárgalas enteras en PDF."),
     h("div", { class: "campo" }, h("label", { for: "norma" }, h("span", {}, "Norma")), selector),
     h("div", { class: "campo" }, h("label", { for: "qn" }, h("span", {}, "Buscar dentro de la norma")), entrada),
+  ], [
     cabeceraNorma, estado, resultados,
-  );
+    h("h2", {}, "Descarga las normas completas"),
+    h("p", { class: "nota" }, "PDF oficial del BOE con el texto consolidado, sin tener que leerlo en la web."),
+    h("ul", { class: "descargas" }, d.normas.map((n) =>
+      h("li", {}, h("a", { href: urlPdfBoe(n.id), rel: "noopener" }, nombreCorto(n.nombre)), h("span", { class: "nota" }, " · PDF")))),
+  ]);
   pintar();
 }
 
@@ -462,15 +514,15 @@ function vistaCalendario(d, params) {
   }
 
   const urlIcs = new URL("data/examenes.ics", location.href);
-  principal.replaceChildren(
+  pagina([
     h("h1", {}, "Calendario de convocatorias y exámenes"),
-    h("p", {}, "Las convocatorias del Estado se toman del BOE cada día, y las fechas de examen, de los anuncios oficiales de admitidos."),
-    h("p", { class: "suscripcion" }, "Suscríbete desde tu calendario: ",
-      h("a", { href: urlIcs.href.replace(/^https?:/, "webcal:") }, "añadir exámenes a mi calendario"), "."),
+    h("p", { class: "intro" }, "Las convocatorias se toman del BOE cada día y las fechas de examen, de los anuncios oficiales de admitidos."),
+    h("p", { class: "suscripcion" }, h("a", { class: "boton", href: urlIcs.href.replace(/^https?:/, "webcal:") }, "Añadir los exámenes a mi calendario")),
+  ], [
     h("div", { class: "campo" }, h("label", { for: "qc" }, h("span", {}, "Buscar")), entrada),
     filtros, casilla, estado, contenedor,
     h("p", { class: "aviso" }, "Cada comunidad, ayuntamiento y universidad publica en su propio boletín, así que sus fechas pueden no aparecer aquí. Consulta siempre el boletín oficial de tu convocatoria."),
-  );
+  ]);
   pintar();
 }
 

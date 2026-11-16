@@ -114,3 +114,56 @@ export function convocatoriasDe(oposicion, convocatorias) {
   if (!claves.length) return [];
   return convocatorias.filter((c) => claves.some((k) => normalizar(c.titulo).includes(k)));
 }
+
+/* ---------- descargas, apuntes y comunidades ---------- */
+
+// PDF oficial del texto consolidado que publica el BOE: la norma entera, lista para descargar.
+export function urlPdfBoe(id) {
+  const m = /^BOE-A-(\d{4})-\d+$/.exec(id ?? "");
+  return m ? `https://www.boe.es/buscar/pdf/${m[1]}/${id}-consolidado.pdf` : "";
+}
+
+// Búsquedas de apuntes sobre un tema; no se copia nada: se lleva al lector a donde está el material.
+export function enlacesApuntes(titulo, oposicion = "") {
+  const tema = titulo.replace(/\.$/, "").trim();
+  const q = (texto) => encodeURIComponent(texto);
+  return [
+    { texto: "Apuntes en PDF", url: `https://www.google.com/search?q=${q(`${tema} ${oposicion} apuntes filetype:pdf`.replace(/\s+/g, " ").trim())}` },
+    { texto: "Resúmenes y esquemas", url: `https://www.google.com/search?q=${q(`${tema} ${oposicion} resumen esquema oposiciones`.replace(/\s+/g, " ").trim())}` },
+    { texto: "Vídeos", url: `https://www.youtube.com/results?search_query=${q(`${tema} ${oposicion}`.trim())}` },
+  ];
+}
+
+const COMUNIDADES = [
+  ["castilla-la-mancha", ["castilla-la mancha", "castilla la mancha"]],
+  ["castilla-y-leon", ["castilla y leon"]],
+  ["andalucia", ["andalucia"]],
+  ["aragon", ["aragon"]],
+  ["asturias", ["asturias"]],
+  ["baleares", ["illes balears", "islas baleares", "baleares"]],
+  ["canarias", ["canarias"]],
+  ["cantabria", ["cantabria"]],
+  ["cataluna", ["cataluna", "catalunya"]],
+  ["comunidad-valenciana", ["comunitat valenciana", "comunidad valenciana", "generalitat valenciana"]],
+  ["extremadura", ["extremadura"]],
+  ["galicia", ["galicia"]],
+  ["madrid", ["comunidad de madrid"]],
+  ["murcia", ["region de murcia"]],
+  ["navarra", ["navarra"]],
+  ["pais-vasco", ["pais vasco", "euskadi"]],
+  ["la-rioja", ["la rioja"]],
+  ["ceuta", ["ceuta"]],
+  ["melilla", ["melilla"]],
+];
+
+export function comunidadDe(convocatoria) {
+  const texto = normalizar(`${convocatoria.organismo ?? ""} ${convocatoria.titulo ?? ""}`);
+  const hallada = COMUNIDADES.find(([, patrones]) => patrones.some((p) => texto.includes(p)));
+  return hallada ? hallada[0] : null;
+}
+
+export function convocatoriasDeComunidad(id, convocatorias) {
+  return convocatorias
+    .filter((c) => comunidadDe(c) === id)
+    .sort((a, b) => (a.fecha < b.fecha ? 1 : a.fecha > b.fecha ? -1 : 0));
+}
