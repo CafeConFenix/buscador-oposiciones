@@ -1,0 +1,151 @@
+/* Paleta de hoja de examen: papel azulado, tinta, subrayador amarillo y bolígrafo rojo para las fechas. */
+:root {
+  --papel: #edf1f6;
+  --superficie: #ffffff;
+  --tinta: #17202e;
+  --tinta-suave: #4a566a;
+  --linea: #cbd3df;
+  --subrayador: #ffe14d;
+  --sobre-subrayador: #17202e;
+  --boli: #1b4fd6;
+  --corrector: #b3261e;
+  --serif: "Literata", Georgia, "Times New Roman", serif;
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #10151d;
+    --superficie: #171e29;
+    --tinta: #e8ecf3;
+    --tinta-suave: #a5b0c2;
+    --linea: #2c3646;
+    --subrayador: #f2d13a;
+    --boli: #8db0ff;
+    --corrector: #ff8f86;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 1rem; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font: 400 1rem/1.6 var(--sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { width: 100%; max-width: 46rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; flex: 1; }
+main:focus { outline: none; }
+a { color: var(--boli); text-underline-offset: 0.2em; }
+a, button, summary, label, select { touch-action: manipulation; }
+:focus-visible { outline: 3px solid var(--boli); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(1.9rem, 5.5vw, 3rem); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.35rem; font-weight: 600; margin-top: 2.5rem; }
+h3 { font-size: 1.05rem; font-weight: 600; margin: 1.2rem 0 0.35rem; }
+p { margin: 0.5rem 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+code { font-size: 0.9em; }
+
+.saltar { position: absolute; left: 0.5rem; top: -4rem; background: var(--superficie); padding: 0.6rem 0.9rem; z-index: 10; }
+.saltar:focus { top: 0.5rem; }
+.solo-lectores { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Cabecera */
+.cabecera {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1.5rem;
+  max-width: 46rem; width: 100%; margin: 0 auto; padding: 1rem 1rem 0;
+}
+.marca { font: 700 1.05rem var(--serif); color: var(--tinta); text-decoration: none; }
+.cabecera nav { display: flex; gap: 1.25rem; }
+.cabecera nav a { color: var(--tinta-suave); text-decoration: none; padding: 0.4rem 0; border-bottom: 3px solid transparent; font-weight: 500; }
+.cabecera nav a:hover { color: var(--tinta); }
+.cabecera nav a[aria-current="page"] { color: var(--tinta); border-bottom-color: var(--subrayador); }
+
+/* El subrayador es lo memorable: marca coincidencias y subraya el campo de búsqueda. */
+mark {
+  background: var(--subrayador); color: var(--sobre-subrayador);
+  padding: 0 0.12em; border-radius: 0.15em; -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.buscador { display: block; margin-top: 1.5rem; }
+.buscador input[type="search"], .campo input, .campo select {
+  width: 100%; font: 500 1.35rem/1.3 var(--serif); color: var(--tinta);
+  background: var(--superficie); border: 1px solid var(--linea); border-bottom: 0.35rem solid var(--subrayador);
+  border-radius: 0.4rem 0.4rem 0 0; padding: 0.85rem 1rem;
+}
+.buscador input::placeholder { color: var(--tinta-suave); opacity: 0.85; }
+.buscador input[type="search"]:focus-visible { outline-offset: 2px; border-radius: 0.4rem; }
+.campo { display: block; margin-top: 1.25rem; }
+.campo > span { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+.campo select, .campo input { font: 500 1.05rem var(--sans); border-bottom-width: 1px; border-radius: 0.4rem; }
+.campo input { font-size: 1.15rem; border-bottom: 0.3rem solid var(--subrayador); border-radius: 0.4rem 0.4rem 0 0; }
+
+.filtros { border: 0; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.filtros legend { float: left; padding: 0; margin-right: 0.75rem; font-weight: 600; line-height: 2.5rem; }
+.filtros input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.filtros label {
+  display: inline-block; padding: 0.45rem 0.9rem; border: 1px solid var(--linea); border-radius: 2rem;
+  background: var(--superficie); cursor: pointer; font-weight: 500; min-height: 2.5rem; line-height: 1.5;
+}
+.filtros input:checked + label { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+.filtros input:focus-visible + label { outline: 3px solid var(--boli); outline-offset: 2px; }
+
+.estado { color: var(--tinta-suave); margin: 1rem 0 0.5rem; min-height: 1.6em; }
+.aviso { background: var(--superficie); border-left: 0.3rem solid var(--subrayador); padding: 0.75rem 1rem; border-radius: 0.3rem; }
+.vacio { margin-top: 1.5rem; }
+
+/* Lista de oposiciones y de artículos */
+.resultados > li { border-top: 1px solid var(--linea); }
+.resultados > li:last-child { border-bottom: 1px solid var(--linea); }
+details > summary { list-style: none; cursor: pointer; padding: 0.9rem 0; display: block; }
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: ""; display: inline-block; width: 0.55em; height: 0.55em; margin-right: 0.7em;
+  border-right: 2px solid var(--tinta-suave); border-bottom: 2px solid var(--tinta-suave);
+  transform: rotate(-45deg); transition: transform 0.15s; vertical-align: 0.1em;
+}
+details[open] > summary::before { transform: rotate(45deg); }
+@media (prefers-reduced-motion: reduce) { details > summary::before { transition: none; } }
+.nombre { font: 600 1.1rem/1.35 var(--serif); }
+.meta { display: flex; flex-wrap: wrap; gap: 0.1rem 0.9rem; margin: 0.15rem 0 0 1.25rem; color: var(--tinta-suave); font-size: 0.9rem; }
+.grupo { font-weight: 600; color: var(--tinta); border: 1px solid var(--tinta-suave); border-radius: 0.25rem; padding: 0 0.35rem; }
+.detalle { margin: 0 0 1.25rem 1.25rem; padding: 0.25rem 0 0.25rem 1rem; border-left: 3px solid var(--subrayador); }
+.detalle ul { display: grid; gap: 0.35rem; }
+.detalle .fecha { color: var(--tinta-suave); font-variant-numeric: tabular-nums; margin-right: 0.5rem; }
+.detalle p.nota { color: var(--tinta-suave); font-size: 0.92rem; }
+
+/* Normas troncales en portada */
+.troncales { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.troncales a {
+  padding: 0.45rem 0.85rem; border: 1px solid var(--linea); border-radius: 0.3rem; background: var(--superficie);
+  color: var(--tinta); text-decoration: none; font-weight: 500;
+}
+.troncales a:hover { border-color: var(--tinta); }
+
+/* Texto legal */
+.articulo-texto { font-family: var(--serif); font-size: 1.05rem; line-height: 1.7; max-width: 62ch; }
+.articulo-texto p { margin: 0.6rem 0; }
+.articulo-texto p:first-child { font-weight: 600; }
+.fragmento { margin: 0.2rem 0 0 1.25rem; color: var(--tinta-suave); font-size: 0.95rem; max-width: 70ch; }
+.cuenta-norma { color: var(--tinta-suave); font-size: 0.92rem; }
+
+/* Calendario */
+.mes { margin-top: 2rem; }
+.mes h2 { margin-top: 0; font-size: 1.2rem; text-transform: none; padding-bottom: 0.4rem; border-bottom: 2px solid var(--tinta); }
+.evento { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.25rem 1rem; padding: 0.8rem 0; border-bottom: 1px solid var(--linea); }
+.evento time { font-variant-numeric: tabular-nums; font-weight: 600; }
+.evento .tipo { display: inline-block; font-weight: 600; font-size: 0.85rem; margin-right: 0.5rem; }
+.evento.examen time, .evento.examen .tipo { color: var(--corrector); }
+.evento.examen .tipo::before { content: ""; display: inline-block; width: 0.5em; height: 0.5em; background: var(--corrector); border-radius: 50%; margin-right: 0.4em; }
+.evento.convocatoria .tipo { color: var(--boli); }
+.evento .organismo { color: var(--tinta-suave); font-size: 0.9rem; }
+.evento .titulo { margin: 0; }
+@media (max-width: 34rem) { .evento { grid-template-columns: 1fr; } }
+.suscripcion { margin-top: 1rem; }
+.casilla { display: flex; align-items: center; gap: 0.6rem; margin-top: 1rem; }
+.casilla input { width: 1.15rem; height: 1.15rem; margin: 0; accent-color: var(--boli); }
+
+.pie { max-width: 46rem; width: 100%; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; color: var(--tinta-suave); font-size: 0.88rem; border-top: 1px solid var(--linea); }

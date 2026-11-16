@@ -1,0 +1,140 @@
+[
+ {
+  "slug": "constitucion",
+  "nombre": "Constitución Española",
+  "id": "BOE-A-1978-31229",
+  "referencia": "Constitución Española"
+ },
+ {
+  "slug": "ley-39-2015",
+  "nombre": "Ley 39/2015, del Procedimiento Administrativo Común",
+  "id": "BOE-A-2015-10565",
+  "referencia": "39/2015"
+ },
+ {
+  "slug": "ley-40-2015",
+  "nombre": "Ley 40/2015, de Régimen Jurídico del Sector Público",
+  "id": "BOE-A-2015-10566",
+  "referencia": "40/2015"
+ },
+ {
+  "slug": "trebep",
+  "nombre": "Estatuto Básico del Empleado Público (RDL 5/2015)",
+  "id": "BOE-A-2015-11719",
+  "referencia": "5/2015"
+ },
+ {
+  "slug": "lo-3-2007",
+  "nombre": "Ley Orgánica 3/2007, de Igualdad efectiva de mujeres y hombres",
+  "id": "BOE-A-2007-6115",
+  "referencia": "3/2007"
+ },
+ {
+  "slug": "lo-1-2004",
+  "nombre": "Ley Orgánica 1/2004, de Violencia de Género",
+  "id": "BOE-A-2004-21760",
+  "referencia": "1/2004"
+ },
+ {
+  "slug": "lopdgdd",
+  "nombre": "Ley Orgánica 3/2018, de Protección de Datos y garantía de los derechos digitales",
+  "id": "BOE-A-2018-16673",
+  "referencia": "3/2018"
+ },
+ {
+  "slug": "ley-19-2013",
+  "nombre": "Ley 19/2013, de Transparencia y Buen Gobierno",
+  "id": "BOE-A-2013-12887",
+  "referencia": "19/2013"
+ },
+ {
+  "slug": "lcsp",
+  "nombre": "Ley 9/2017, de Contratos del Sector Público",
+  "id": "BOE-A-2017-12902",
+  "referencia": "9/2017"
+ },
+ {
+  "slug": "lgp",
+  "nombre": "Ley 47/2003, General Presupuestaria",
+  "id": "BOE-A-2003-21614",
+  "referencia": "47/2003"
+ },
+ {
+  "slug": "lgt",
+  "nombre": "Ley 58/2003, General Tributaria",
+  "id": "BOE-A-2003-23186",
+  "referencia": "58/2003"
+ },
+ {
+  "slug": "lbrl",
+  "nombre": "Ley 7/1985, Reguladora de las Bases del Régimen Local",
+  "id": "BOE-A-1985-5392",
+  "referencia": "7/1985"
+ },
+ {
+  "slug": "lopj",
+  "nombre": "Ley Orgánica 6/1985, del Poder Judicial",
+  "id": "BOE-A-1985-12666",
+  "referencia": "6/1985"
+ },
+ {
+  "slug": "lec",
+  "nombre": "Ley 1/2000, de Enjuiciamiento Civil",
+  "id": "BOE-A-2000-323",
+  "referencia": "1/2000"
+ },
+ {
+  "slug": "lecrim",
+  "nombre": "Ley de Enjuiciamiento Criminal (1882)",
+  "id": "BOE-A-1882-6036",
+  "referencia": "Enjuiciamiento Criminal"
+ },
+ {
+  "slug": "codigo-penal",
+  "nombre": "Código Penal (Ley Orgánica 10/1995)",
+  "id": "BOE-A-1995-25444",
+  "referencia": "10/1995"
+ },
+ {
+  "slug": "codigo-civil",
+  "nombre": "Código Civil",
+  "id": "BOE-A-1889-4763",
+  "referencia": "Código Civil"
+ },
+ {
+  "slug": "lo-2-1986",
+  "nombre": "Ley Orgánica 2/1986, de Fuerzas y Cuerpos de Seguridad",
+  "id": "BOE-A-1986-6859",
+  "referencia": "2/1986"
+ },
+ {
+  "slug": "lo-4-2015",
+  "nombre": "Ley Orgánica 4/2015, de Protección de la Seguridad Ciudadana",
+  "id": "BOE-A-2015-3442",
+  "referencia": "4/2015"
+ },
+ {
+  "slug": "loe",
+  "nombre": "Ley Orgánica 2/2006, de Educación (LOE, con la LOMLOE)",
+  "id": "BOE-A-2006-7899",
+  "referencia": "2/2006"
+ },
+ {
+  "slug": "ley-general-sanidad",
+  "nombre": "Ley 14/1986, General de Sanidad",
+  "id": "BOE-A-1986-10499",
+  "referencia": "14/1986"
+ },
+ {
+  "slug": "lops",
+  "nombre": "Ley 44/2003, de Ordenación de las Profesiones Sanitarias",
+  "id": "BOE-A-2003-21340",
+  "referencia": "44/2003"
+ },
+ {
+  "slug": "ley-cohesion",
+  "nombre": "Ley 16/2003, de Cohesión y Calidad del Sistema Nacional de Salud",
+  "id": "BOE-A-2003-10715",
+  "referencia": "16/2003"
+ }
+]

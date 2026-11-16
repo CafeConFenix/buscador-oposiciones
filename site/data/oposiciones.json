@@ -1,0 +1,1964 @@
+[
+ {
+  "id": "cuerpo-general-auxiliar-de-la-administracion-del-estado",
+  "nombre": "Cuerpo General Auxiliar de la Administración del Estado",
+  "aliases": [
+   "Auxiliar Administrativo del Estado",
+   "Auxiliar AGE",
+   "C2 AGE",
+   "Auxiliar del Estado"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "C2",
+  "boe": [
+   "Cuerpo General Auxiliar"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-general-administrativo-de-la-administracion-del-estado",
+  "nombre": "Cuerpo General Administrativo de la Administración del Estado",
+  "aliases": [
+   "Administrativo del Estado",
+   "Administrativo AGE",
+   "C1 AGE"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Cuerpo General Administrativo"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-gestion-de-la-administracion-civil-del-estado",
+  "nombre": "Cuerpo de Gestión de la Administración Civil del Estado",
+  "aliases": [
+   "Gestión del Estado",
+   "Gestión Civil del Estado",
+   "Gestión AGE",
+   "A2 AGE"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Gestión de la Administración Civil del Estado"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-superior-de-administradores-civiles-del-estado",
+  "nombre": "Cuerpo Superior de Administradores Civiles del Estado",
+  "aliases": [
+   "Administrador Civil del Estado",
+   "Administradores Civiles",
+   "A1 AGE"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Administradores Civiles del Estado"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-tecnicos-auxiliares-de-informatica-de-la-administracion-del-",
+  "nombre": "Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado",
+  "aliases": [
+   "TAI",
+   "Técnico Auxiliar de Informática",
+   "Informática C1"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Técnicos Auxiliares de Informática"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-gestion-de-sistemas-e-informatica-de-la-administracion-del-e",
+  "nombre": "Cuerpo de Gestión de Sistemas e Informática de la Administración del Estado",
+  "aliases": [
+   "Gestión de Sistemas e Informática",
+   "GSI",
+   "Informática A2"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Gestión de Sistemas e Informática"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-superior-de-sistemas-y-tecnologias-de-la-informacion-de-la-admi",
+  "nombre": "Cuerpo Superior de Sistemas y Tecnologías de la Información de la Administración del Estado",
+  "aliases": [
+   "Superior de Sistemas",
+   "TIC A1",
+   "Informática A1"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Sistemas y Tecnologías de la Información"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-facultativo-de-archiveros-bibliotecarios-arqueologos-y-conserva",
+  "nombre": "Cuerpo Facultativo de Archiveros, Bibliotecarios, Arqueólogos y Conservadores de Museos",
+  "aliases": [
+   "Archiveros",
+   "Bibliotecarios",
+   "Archivos y bibliotecas",
+   "Conservadores de Museos"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Archiveros, Bibliotecarios"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "abogacia-del-estado",
+  "nombre": "Abogacía del Estado",
+  "aliases": [
+   "Abogado del Estado",
+   "Abogados del Estado"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Abogados del Estado"
+  ],
+  "normas": [
+   "constitucion",
+   "codigo-civil",
+   "lec",
+   "codigo-penal",
+   "lopj"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "carrera-diplomatica",
+  "nombre": "Carrera Diplomática",
+  "aliases": [
+   "Diplomático",
+   "Diplomáticos"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Carrera Diplomática"
+  ],
+  "normas": [
+   "constitucion"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-superior-de-inspectores-de-trabajo-y-seguridad-social",
+  "nombre": "Cuerpo Superior de Inspectores de Trabajo y Seguridad Social",
+  "aliases": [
+   "Inspector de Trabajo",
+   "Inspección de Trabajo"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Inspectores de Trabajo"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-tecnicos-comerciales-y-economistas-del-estado",
+  "nombre": "Cuerpo de Técnicos Comerciales y Economistas del Estado",
+  "aliases": [
+   "TCEE",
+   "Técnico Comercial del Estado",
+   "Economistas del Estado"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Técnicos Comerciales y Economistas del Estado"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-tecnico-de-hacienda",
+  "nombre": "Cuerpo Técnico de Hacienda",
+  "aliases": [
+   "Técnico de Hacienda",
+   "Técnicos de Hacienda",
+   "TH"
+  ],
+  "area": "Hacienda",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Cuerpo Técnico de Hacienda"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lgt",
+   "lgp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "Agencia Tributaria",
+    "url": "https://www.agenciatributaria.es"
+   },
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-superior-de-inspectores-de-hacienda-del-estado",
+  "nombre": "Cuerpo Superior de Inspectores de Hacienda del Estado",
+  "aliases": [
+   "Inspector de Hacienda",
+   "Inspectores de Hacienda",
+   "IHE"
+  ],
+  "area": "Hacienda",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Inspectores de Hacienda"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lgt",
+   "lgp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "Agencia Tributaria",
+    "url": "https://www.agenciatributaria.es"
+   },
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "agentes-de-la-hacienda-publica",
+  "nombre": "Agentes de la Hacienda Pública",
+  "aliases": [
+   "Agente de Hacienda",
+   "Agente Tributario",
+   "Agentes Tributarios",
+   "AEAT",
+   "Hacienda C1"
+  ],
+  "area": "Hacienda",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Agentes de la Hacienda Pública"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lgt",
+   "lgp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "Agencia Tributaria",
+    "url": "https://www.agenciatributaria.es"
+   },
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-administrativo-de-la-administracion-de-la-seguridad-social",
+  "nombre": "Cuerpo Administrativo de la Administración de la Seguridad Social",
+  "aliases": [
+   "Administrativo Seguridad Social",
+   "Administrativo SS",
+   "INSS Administrativo"
+  ],
+  "area": "Seguridad Social",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Administración de la Seguridad Social"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-gestion-de-la-administracion-de-la-seguridad-social",
+  "nombre": "Cuerpo de Gestión de la Administración de la Seguridad Social",
+  "aliases": [
+   "Gestión Seguridad Social",
+   "Gestión SS"
+  ],
+  "area": "Seguridad Social",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Gestión de la Administración de la Seguridad Social"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   },
+   {
+    "titulo": "INAP",
+    "url": "https://www.inap.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-auxilio-judicial",
+  "nombre": "Cuerpo de Auxilio Judicial",
+  "aliases": [
+   "Auxilio Judicial",
+   "Auxilio",
+   "Juzgados C2",
+   "Justicia C2"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "C2",
+  "boe": [
+   "Auxilio Judicial"
+  ],
+  "normas": [
+   "constitucion",
+   "lopj",
+   "lec",
+   "lecrim",
+   "codigo-penal",
+   "codigo-civil",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-tramitacion-procesal-y-administrativa",
+  "nombre": "Cuerpo de Tramitación Procesal y Administrativa",
+  "aliases": [
+   "Tramitación Procesal",
+   "Tramitación",
+   "Juzgados C1",
+   "Justicia C1"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Tramitación Procesal y Administrativa"
+  ],
+  "normas": [
+   "constitucion",
+   "lopj",
+   "lec",
+   "lecrim",
+   "codigo-penal",
+   "codigo-civil",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-gestion-procesal-y-administrativa",
+  "nombre": "Cuerpo de Gestión Procesal y Administrativa",
+  "aliases": [
+   "Gestión Procesal",
+   "Gestión Justicia",
+   "Juzgados A2",
+   "Justicia A2"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Gestión Procesal y Administrativa"
+  ],
+  "normas": [
+   "constitucion",
+   "lopj",
+   "lec",
+   "lecrim",
+   "codigo-penal",
+   "codigo-civil",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "carrera-judicial-y-fiscal",
+  "nombre": "Carrera Judicial y Fiscal",
+  "aliases": [
+   "Judicatura",
+   "Jueces y Fiscales",
+   "Juez",
+   "Fiscal",
+   "Magistrado"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Carrera Judicial",
+   "Carrera Fiscal"
+  ],
+  "normas": [
+   "constitucion",
+   "lopj",
+   "lec",
+   "lecrim",
+   "codigo-penal",
+   "codigo-civil",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "letrados-de-la-administracion-de-justicia",
+  "nombre": "Letrados de la Administración de Justicia",
+  "aliases": [
+   "LAJ",
+   "Secretario Judicial",
+   "Letrado de Justicia"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Letrados de la Administración de Justicia"
+  ],
+  "normas": [
+   "constitucion",
+   "lopj",
+   "lec",
+   "lecrim",
+   "codigo-penal",
+   "codigo-civil",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-medicos-forenses",
+  "nombre": "Cuerpo de Médicos Forenses",
+  "aliases": [
+   "Médico Forense",
+   "Forense"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Médicos Forenses"
+  ],
+  "normas": [
+   "constitucion",
+   "lopj",
+   "lec",
+   "lecrim",
+   "codigo-penal",
+   "codigo-civil",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "registradores-de-la-propiedad-mercantiles-y-de-bienes-muebles",
+  "nombre": "Registradores de la Propiedad, Mercantiles y de Bienes Muebles",
+  "aliases": [
+   "Registrador",
+   "Registradores",
+   "Registros"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Registradores"
+  ],
+  "normas": [
+   "constitucion",
+   "codigo-civil",
+   "lec",
+   "codigo-penal",
+   "lopj"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "notarias",
+  "nombre": "Notarías",
+  "aliases": [
+   "Notario",
+   "Notarios",
+   "Oposición a Notarías"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Notarías"
+  ],
+  "normas": [
+   "constitucion",
+   "codigo-civil",
+   "lec",
+   "codigo-penal",
+   "lopj"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "policia-nacional-escala-basica",
+  "nombre": "Policía Nacional - Escala Básica",
+  "aliases": [
+   "Policía Nacional",
+   "Poli Nacional",
+   "Policía",
+   "Escala Básica"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Escala Básica"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "Policía Nacional",
+    "url": "https://www.policia.es"
+   },
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "policia-nacional-escala-ejecutiva",
+  "nombre": "Policía Nacional - Escala Ejecutiva",
+  "aliases": [
+   "Inspector de Policía",
+   "Escala Ejecutiva",
+   "Inspector Policía Nacional"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Escala Ejecutiva"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "Policía Nacional",
+    "url": "https://www.policia.es"
+   },
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "guardia-civil-cabos-y-guardias",
+  "nombre": "Guardia Civil - Cabos y Guardias",
+  "aliases": [
+   "Guardia Civil",
+   "Benemérita",
+   "Guardia civil acceso"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Guardia Civil"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "Guardia Civil",
+    "url": "https://www.guardiacivil.es"
+   },
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-ayudantes-de-instituciones-penitenciarias",
+  "nombre": "Cuerpo de Ayudantes de Instituciones Penitenciarias",
+  "aliases": [
+   "Ayudante de Prisiones",
+   "Funcionario de prisiones",
+   "Instituciones Penitenciarias",
+   "Prisiones"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Ayudantes de Instituciones Penitenciarias"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tropa-y-marineria",
+  "nombre": "Tropa y Marinería",
+  "aliases": [
+   "Tropa",
+   "Marinería",
+   "Ejército",
+   "Militar",
+   "Fuerzas Armadas"
+  ],
+  "area": "Defensa",
+  "ambito": "Estado",
+  "grupo": "",
+  "boe": [
+   "Tropa y Marinería"
+  ],
+  "normas": [
+   "constitucion"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "mossos-d-esquadra",
+  "nombre": "Mossos d'Esquadra",
+  "aliases": [
+   "Mossos",
+   "Policía de Cataluña"
+  ],
+  "area": "Seguridad",
+  "ambito": "Autonómica",
+  "grupo": "",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "ertzaintza",
+  "nombre": "Ertzaintza",
+  "aliases": [
+   "Policía Vasca",
+   "Ertzaina"
+  ],
+  "area": "Seguridad",
+  "ambito": "Autonómica",
+  "grupo": "",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "policia-foral-de-navarra",
+  "nombre": "Policía Foral de Navarra",
+  "aliases": [
+   "Policía Foral"
+  ],
+  "area": "Seguridad",
+  "ambito": "Autonómica",
+  "grupo": "",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "policia-local",
+  "nombre": "Policía Local",
+  "aliases": [
+   "Policía Municipal",
+   "Policía de Ayuntamiento",
+   "Agente de Policía Local"
+  ],
+  "area": "Seguridad",
+  "ambito": "Local",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "bombero",
+  "nombre": "Bombero",
+  "aliases": [
+   "Bomberos",
+   "Bombero de Ayuntamiento",
+   "Bombero Diputación",
+   "Servicio de Extinción de Incendios"
+  ],
+  "area": "Seguridad",
+  "ambito": "Local",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "lcsp",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "correos-personal-laboral-reparto-y-atencion-al-cliente",
+  "nombre": "Correos - Personal laboral (reparto y atención al cliente)",
+  "aliases": [
+   "Correos",
+   "Cartero",
+   "Reparto Correos",
+   "Atención al cliente Correos"
+  ],
+  "area": "Correos",
+  "ambito": "Estado",
+  "grupo": "",
+  "boe": [],
+  "normas": [
+   "constitucion"
+  ],
+  "enlaces": [
+   {
+    "titulo": "Correos",
+    "url": "https://www.correos.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-maestros",
+  "nombre": "Cuerpo de Maestros",
+  "aliases": [
+   "Maestro",
+   "Maestros",
+   "Magisterio",
+   "Primaria",
+   "Educación Infantil",
+   "Infantil",
+   "Pedagogía Terapéutica",
+   "Audición y Lenguaje"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [
+   "Cuerpo de Maestros"
+  ],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-profesores-de-ensenanza-secundaria",
+  "nombre": "Cuerpo de Profesores de Enseñanza Secundaria",
+  "aliases": [
+   "Profesor de Secundaria",
+   "Secundaria",
+   "PES",
+   "Instituto",
+   "Profesor ESO y Bachillerato"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [
+   "Profesores de Enseñanza Secundaria"
+  ],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-profesores-tecnicos-de-formacion-profesional",
+  "nombre": "Cuerpo de Profesores Técnicos de Formación Profesional",
+  "aliases": [
+   "PTFP",
+   "Profesor Técnico de FP",
+   "Profesor FP"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [
+   "Profesores Técnicos de Formación Profesional"
+  ],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-profesores-de-escuelas-oficiales-de-idiomas",
+  "nombre": "Cuerpo de Profesores de Escuelas Oficiales de Idiomas",
+  "aliases": [
+   "EOI",
+   "Profesor de idiomas",
+   "Escuela Oficial de Idiomas"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [
+   "Escuelas Oficiales de Idiomas"
+  ],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-inspectores-de-educacion",
+  "nombre": "Cuerpo de Inspectores de Educación",
+  "aliases": [
+   "Inspector de Educación",
+   "Inspección Educativa"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [
+   "Inspectores de Educación"
+  ],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "enfermero-a-de-servicios-de-salud",
+  "nombre": "Enfermero/a de servicios de salud",
+  "aliases": [
+   "Enfermería",
+   "Enfermero",
+   "Enfermera",
+   "DUE",
+   "SAS",
+   "SERMAS",
+   "SESCAM",
+   "Osakidetza",
+   "SERGAS",
+   "ICS"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-en-cuidados-auxiliares-de-enfermeria-tcae",
+  "nombre": "Técnico en Cuidados Auxiliares de Enfermería (TCAE)",
+  "aliases": [
+   "TCAE",
+   "Auxiliar de Enfermería",
+   "Auxiliar de Clínica"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "celador-a-de-servicios-de-salud",
+  "nombre": "Celador/a de servicios de salud",
+  "aliases": [
+   "Celador",
+   "Celadores"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "AP",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "auxiliar-administrativo-de-servicios-de-salud",
+  "nombre": "Auxiliar Administrativo de servicios de salud",
+  "aliases": [
+   "Auxiliar Administrativo SAS",
+   "Auxiliar Administrativo SERMAS",
+   "Auxiliar Administrativo hospital"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "fisioterapeuta-de-servicios-de-salud",
+  "nombre": "Fisioterapeuta de servicios de salud",
+  "aliases": [
+   "Fisioterapia",
+   "Fisio"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-superior-sanitario-laboratorio-imagen-anatomia-patologica",
+  "nombre": "Técnico Superior Sanitario (laboratorio, imagen, anatomía patológica)",
+  "aliases": [
+   "Técnico de laboratorio",
+   "Técnico de Rayos",
+   "Radiodiagnóstico",
+   "Anatomía Patológica",
+   "TSS"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "matrona",
+  "nombre": "Matrona",
+  "aliases": [
+   "Enfermero especialista obstétrico-ginecológico",
+   "Comadrona"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "auxiliar-administrativo-de-comunidad-autonoma",
+  "nombre": "Auxiliar Administrativo de Comunidad Autónoma",
+  "aliases": [
+   "Auxiliar CCAA",
+   "Auxiliar Junta",
+   "Auxiliar Generalitat",
+   "Auxiliar Xunta",
+   "Auxiliar Gobierno autonómico",
+   "C2 autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "administrativo-de-comunidad-autonoma",
+  "nombre": "Administrativo de Comunidad Autónoma",
+  "aliases": [
+   "Administrativo CCAA",
+   "Administrativo Junta",
+   "Administrativo Generalitat",
+   "C1 autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "gestion-de-administracion-general-de-comunidad-autonoma",
+  "nombre": "Gestión de Administración General de Comunidad Autónoma",
+  "aliases": [
+   "Gestión CCAA",
+   "Gestión Junta",
+   "A2 autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-superior-de-administracion-general-de-comunidad-autonoma",
+  "nombre": "Técnico Superior de Administración General de Comunidad Autónoma",
+  "aliases": [
+   "Técnico Superior CCAA",
+   "Técnico de Administración General autonómico",
+   "A1 autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "auxiliar-administrativo-de-ayuntamiento",
+  "nombre": "Auxiliar Administrativo de Ayuntamiento",
+  "aliases": [
+   "Auxiliar Ayuntamiento",
+   "Auxiliar Administrativo Local",
+   "Auxiliar Diputación",
+   "C2 local"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "lcsp",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "administrativo-de-administracion-general-local",
+  "nombre": "Administrativo de Administración General (Local)",
+  "aliases": [
+   "Administrativo Ayuntamiento",
+   "Administrativo Local",
+   "Administrativo Diputación",
+   "C1 local"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "lcsp",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-de-administracion-general-local",
+  "nombre": "Técnico de Administración General (Local)",
+  "aliases": [
+   "TAG",
+   "Técnico de Administración General",
+   "A1 local",
+   "Técnico Ayuntamiento"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "lcsp",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "funcionarios-de-administracion-local-con-habilitacion-nacional",
+  "nombre": "Funcionarios de Administración Local con habilitación nacional",
+  "aliases": [
+   "Secretario-Interventor",
+   "Secretaría-Intervención",
+   "Habilitado nacional",
+   "FHN",
+   "Secretario de Ayuntamiento",
+   "Interventor de Ayuntamiento"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "A1",
+  "boe": [
+   "Habilitación de carácter nacional"
+  ],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "lcsp",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ }
+]

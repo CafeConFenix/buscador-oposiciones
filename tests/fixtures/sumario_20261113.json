@@ -1,0 +1,94 @@
+{
+  "status": {"code": "200", "text": "ok"},
+  "data": {
+    "sumario": {
+      "metadatos": {"publicacion": "BOE", "fecha_publicacion": "20261113"},
+      "diario": [
+        {
+          "numero": "273",
+          "sumario_diario": {"identificador": "BOE-S-2026-273"},
+          "seccion": [
+            {
+              "codigo": "1",
+              "nombre": "I. Disposiciones generales",
+              "departamento": [
+                {
+                  "codigo": "9562",
+                  "nombre": "MINISTERIO DE ASUNTOS EXTERIORES",
+                  "epigrafe": [
+                    {
+                      "nombre": "Tratados internacionales",
+                      "item": {
+                        "identificador": "BOE-A-2026-99001",
+                        "titulo": "Tratado sin relación con oposiciones.",
+                        "url_pdf": {"texto": "https://www.boe.es/boe/dias/2026/11/13/pdfs/BOE-A-2026-99001.pdf"},
+                        "url_html": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-99001"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "codigo": "2B",
+              "nombre": "B. Oposiciones y concursos",
+              "departamento": [
+                {
+                  "codigo": "1234",
+                  "nombre": "MINISTERIO PARA LA TRANSFORMACIÓN DIGITAL Y DE LA FUNCIÓN PÚBLICA",
+                  "epigrafe": [
+                    {
+                      "nombre": "Cuerpos y Escalas de la Administración del Estado",
+                      "item": {
+                        "identificador": "BOE-A-2026-20001",
+                        "titulo": "Resolución de 10 de noviembre de 2026, de la Subsecretaría, por la que se convoca proceso selectivo para ingreso, por el sistema general de acceso libre, en el Cuerpo General Administrativo de la Administración del Estado.",
+                        "url_pdf": {"texto": "https://www.boe.es/boe/dias/2026/11/13/pdfs/BOE-A-2026-20001.pdf"},
+                        "url_html": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20001"
+                      }
+                    },
+                    {
+                      "nombre": "Otros",
+                      "item": [
+                        {
+                          "identificador": "BOE-A-2026-20002",
+                          "titulo": "Resolución de 9 de noviembre de 2026, de la Subsecretaría, por la que se aprueba la lista de personas admitidas y excluidas y se anuncian lugar, fecha y hora de realización del primer ejercicio del proceso selectivo para ingreso en el Cuerpo General Auxiliar de la Administración del Estado.",
+                          "url_pdf": {"texto": "https://www.boe.es/boe/dias/2026/11/13/pdfs/BOE-A-2026-20002.pdf"},
+                          "url_html": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20002",
+                          "url_xml": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-20002"
+                        },
+                        {
+                          "identificador": "BOE-A-2026-20003",
+                          "titulo": "Resolución de 9 de noviembre de 2026, de la Subsecretaría, por la que se convoca concurso específico para la provisión de puestos de trabajo.",
+                          "url_pdf": {"texto": "https://www.boe.es/boe/dias/2026/11/13/pdfs/BOE-A-2026-20003.pdf"},
+                          "url_html": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20003"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "codigo": "5678",
+                  "nombre": "MINISTERIO DEL INTERIOR",
+                  "item": [
+                    {
+                      "identificador": "BOE-A-2026-20004",
+                      "titulo": "Corrección de errores de la Resolución de 2 de noviembre de 2026, por la que se convoca proceso selectivo para el ingreso en el Cuerpo de Ayudantes de Instituciones Penitenciarias.",
+                      "url_pdf": {"texto": "https://www.boe.es/boe/dias/2026/11/13/pdfs/BOE-A-2026-20004.pdf"},
+                      "url_html": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20004"
+                    },
+                    {
+                      "identificador": "BOE-A-2026-20005",
+                      "titulo": "Orden INT/1/2026, de 5 de noviembre, por la que se publica la relación de aprobados del proceso selectivo para el ingreso en la Escala Básica de la Policía Nacional.",
+                      "url_pdf": {"texto": "https://www.boe.es/boe/dias/2026/11/13/pdfs/BOE-A-2026-20005.pdf"},
+                      "url_html": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20005"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
