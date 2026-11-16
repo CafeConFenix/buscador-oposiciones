@@ -53,3 +53,26 @@ def test_titulo_desconocido_es_otros():
 def test_sumario_vacio_no_da_resultados():
     assert extraer_convocatorias({"status": {"code": "404"}, "data": {}}) == []
     assert extraer_convocatorias(None) == []
+
+
+def test_reconoce_la_seccion_por_su_nombre_aunque_cambie_el_codigo():
+    sumario = {
+        "data": {
+            "sumario": {
+                "metadatos": {"fecha_publicacion": "20261113"},
+                "diario": [
+                    {
+                        "seccion": {
+                            "codigo": "II.B",
+                            "nombre": "II. Autoridades y personal - B. Oposiciones y concursos",
+                            "departamento": {
+                                "nombre": "MINISTERIO X",
+                                "item": {"identificador": "BOE-A-2026-1", "titulo": "Resolución por la que se convoca proceso selectivo."},
+                            },
+                        }
+                    }
+                ],
+            }
+        }
+    }
+    assert [c.id for c in extraer_convocatorias(sumario)] == ["BOE-A-2026-1"]

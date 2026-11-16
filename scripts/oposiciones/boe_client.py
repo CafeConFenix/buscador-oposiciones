@@ -53,12 +53,19 @@ class BoeClient:
         return None if cuerpo is None else json.loads(cuerpo)
 
     def indice(self, id_norma: str) -> list[dict]:
+        """Bloques de una norma con su fecha de actualización.
+
+        En JSON la API devuelve `data` como lista (o como objeto, según el endpoint) y cada elemento
+        puede venir dentro de un nodo `bloque`; se acepta cualquiera de las formas.
+        """
         cuerpo = self._pedir(f"{BASE}/legislacion-consolidada/id/{id_norma}/texto/indice", "application/json")
-        datos = (json.loads(cuerpo).get("data") or {})
-        bloques = datos.get("bloque")
-        if bloques is None:  # por si la API envuelve la lista en otro nodo
-            bloques = next((v for v in datos.values() if isinstance(v, list)), [])
-        return bloques if isinstance(bloques, list) else [bloques]
+        return _buscar_bloques(json.loads(cuerpo).get("data"))
+
+    def texto_completo(self, id_norma: str) -> list[Bloque]:
+        """Todos los bloques de la norma en una sola petición (solo XML). Se queda con la versión vigente."""
+        cuerpo = self._pedir(f"{BASE}/legislacion-consolidada/id/{id_norma}/texto", "application/xml")
+        nodos = ET.fromstring(cuerpo).findall(".//bloque")
+        return [_a_bloque(n, n.get("id", "")) for n in nodos]
 
     def bloque(self, id_norma: str, id_bloque: str) -> Bloque:
         """Texto vigente (última versión) de un bloque. La API sólo ofrece XML aquí."""
@@ -68,15 +75,7 @@ class BoeClient:
         nodo = ET.fromstring(cuerpo).find(".//bloque")
         if nodo is None:
             raise ErrorBoe(f"Bloque {id_bloque} de {id_norma} sin contenido")
-        versiones = nodo.findall("version")
-        vigente = versiones[-1] if versiones else nodo
-        parrafos = ["".join(p.itertext()).strip() for p in vigente.findall("p")]
-        return Bloque(
-            id=nodo.get("id", id_bloque),
-            tipo=nodo.get("tipo", ""),
-            titulo=nodo.get("titulo", ""),
-            parrafos=[p for p in parrafos if p],
-        )
+        return _a_bloque(nodo, id_bloque)
 
     def titulo_norma(self, id_norma: str) -> str:
         cuerpo = self._pedir(f"{BASE}/legislacion-consolidada/id/{id_norma}/metadatos", "application/json")
@@ -87,6 +86,11 @@ class BoeClient:
         cuerpo = self._pedir(url, "application/xml")
         return " ".join("".join(ET.fromstring(cuerpo).itertext()).split())
 
+    def parrafos_xml(self, url: str) -> str:
+        """Texto de un documento del sumario conservando un párrafo por línea."""
+        cuerpo = self._pedir(url, "application/xml")
+        return "\n".join(" ".join("".join(p.itertext()).split()) for p in ET.fromstring(cuerpo).iter("p"))
+
     def _pedir(self, url: str, accept: str, permitir_404: bool = False) -> bytes | None:
         estado, cuerpo = self._abrir(url, accept)
         if estado == 200:
@@ -94,6 +98,29 @@ class BoeClient:
         if estado == 404 and permitir_404:
             return None
         raise ErrorBoe(f"BOE respondió {estado} en {url}")
+
+
+def _a_bloque(nodo: ET.Element, id_por_defecto: str) -> Bloque:
+    versiones = nodo.findall("version")
+    vigente = versiones[-1] if versiones else nodo
+    parrafos = ["".join(p.itertext()).strip() for p in vigente.findall("p")]
+    return Bloque(
+        id=nodo.get("id", id_por_defecto),
+        tipo=nodo.get("tipo", ""),
+        titulo=nodo.get("titulo", ""),
+        parrafos=[p for p in parrafos if p],
+    )
+
+
+def _buscar_bloques(obj) -> list[dict]:
+    """Recorre la respuesta y devuelve los diccionarios que describen un bloque (tienen `id`)."""
+    if isinstance(obj, list):
+        return [b for elemento in obj for b in _buscar_bloques(elemento)]
+    if isinstance(obj, dict):
+        if "id" in obj and not isinstance(obj["id"], (dict, list)):
+            return [obj]
+        return [b for valor in obj.values() for b in _buscar_bloques(valor)]
+    return []
 
 
 def _buscar_clave(obj, clave: str):

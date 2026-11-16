@@ -1,0 +1,7 @@
+{
+  "status": {"code": "200", "text": "ok"},
+  "data": [
+    {"bloque": {"id": "a14", "titulo": "Artículo 14", "fecha_actualizacion": "19781229"}},
+    {"bloque": {"id": "a135", "titulo": "Artículo 135", "fecha_actualizacion": "20110927"}}
+  ]
+}

@@ -4,7 +4,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-SECCION_OPOSICIONES = "2B"
+CODIGOS_SECCION_OPOSICIONES = {"2B", "II.B", "IIB"}
+
+
+def _es_seccion_de_oposiciones(seccion: dict) -> bool:
+    nombre = str(seccion.get("nombre", "")).lower()
+    return seccion.get("codigo") in CODIGOS_SECCION_OPOSICIONES or "oposiciones y concursos" in nombre
 
 
 @dataclass(frozen=True)
@@ -45,7 +50,7 @@ def extraer_convocatorias(sumario: dict | None) -> list[Convocatoria]:
     resultado: list[Convocatoria] = []
     for diario in _como_lista(datos.get("diario")):
         for seccion in _como_lista(diario.get("seccion")):
-            if seccion.get("codigo") != SECCION_OPOSICIONES:
+            if not _es_seccion_de_oposiciones(seccion):
                 continue
             for departamento in _como_lista(seccion.get("departamento")):
                 organismo = departamento.get("nombre", "")

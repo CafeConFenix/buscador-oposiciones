@@ -1,0 +1,8 @@
+{
+  "status": {"code": "200", "text": "ok"},
+  "data": [
+    {"id": "no", "titulo": "[nota_inicial]", "fecha_actualizacion": "20110927", "url": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1978-31229/texto/bloque/no"},
+    {"id": "a14", "titulo": "Artículo 14", "fecha_actualizacion": "19781229", "url": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1978-31229/texto/bloque/a14"},
+    {"id": "a135", "titulo": "Artículo 135", "fecha_actualizacion": "20110927", "url": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1978-31229/texto/bloque/a135"}
+  ]
+}

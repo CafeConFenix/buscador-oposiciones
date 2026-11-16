@@ -44,3 +44,31 @@ def test_metadatos_extrae_el_titulo(abrir_falso):
     url = f"{BASE}/legislacion-consolidada/id/BOE-A-2015-10565/metadatos"
     cuerpo = b'{"status":{"code":"200"},"data":{"metadatos":{"titulo":"Ley 39/2015, de 1 de octubre."}}}'
     assert BoeClient(abrir_falso({url: (200, cuerpo)})).titulo_norma("BOE-A-2015-10565") == "Ley 39/2015, de 1 de octubre."
+
+
+def test_indice_acepta_data_como_lista_de_bloques(cargar_bytes, abrir_falso):
+    # La API real devuelve en JSON "data" como lista (sin el nodo "bloque").
+    url = f"{BASE}/legislacion-consolidada/id/BOE-A-1978-31229/texto/indice"
+    bloques = BoeClient(abrir_falso({url: (200, cargar_bytes("indice_lista.json"))})).indice("BOE-A-1978-31229")
+    assert [b["id"] for b in bloques] == ["no", "a14", "a135"]
+    assert bloques[2]["fecha_actualizacion"] == "20110927"
+
+
+def test_indice_acepta_elementos_envueltos_en_bloque(cargar_bytes, abrir_falso):
+    url = f"{BASE}/legislacion-consolidada/id/BOE-A-1978-31229/texto/indice"
+    bloques = BoeClient(abrir_falso({url: (200, cargar_bytes("indice_lista_envuelta.json"))})).indice("BOE-A-1978-31229")
+    assert [b["id"] for b in bloques] == ["a14", "a135"]
+
+
+def test_indice_vacio_devuelve_lista_vacia(abrir_falso):
+    url = f"{BASE}/legislacion-consolidada/id/X/texto/indice"
+    assert BoeClient(abrir_falso({url: (200, b'{"status":{"code":"200"},"data":[]}')})).indice("X") == []
+
+
+def test_texto_completo_devuelve_todos_los_bloques_con_su_version_vigente(cargar_bytes, abrir_falso):
+    url = f"{BASE}/legislacion-consolidada/id/BOE-A-1978-31229/texto"
+    bloques = BoeClient(abrir_falso({url: (200, cargar_bytes("texto_completo.xml"))})).texto_completo("BOE-A-1978-31229")
+    assert [b.id for b in bloques] == ["no", "ti", "a14", "a135", "da1", "fi"]
+    a135 = next(b for b in bloques if b.id == "a135")
+    assert "Estabilidad" in a135.parrafos[1] and not any("antiguo" in p for p in a135.parrafos)
+    assert next(b for b in bloques if b.id == "fi").tipo == "firma"

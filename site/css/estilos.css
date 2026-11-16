@@ -60,7 +60,7 @@ code { font-size: 0.9em; }
   max-width: 46rem; width: 100%; margin: 0 auto; padding: 1rem 1rem 0;
 }
 .marca { font: 700 1.05rem var(--serif); color: var(--tinta); text-decoration: none; }
-.cabecera nav { display: flex; gap: 1.25rem; }
+.cabecera nav { display: flex; flex-wrap: wrap; gap: 0 1.1rem; }
 .cabecera nav a { color: var(--tinta-suave); text-decoration: none; padding: 0.4rem 0; border-bottom: 3px solid transparent; font-weight: 500; }
 .cabecera nav a:hover { color: var(--tinta); }
 .cabecera nav a[aria-current="page"] { color: var(--tinta); border-bottom-color: var(--subrayador); }
@@ -149,3 +149,43 @@ details[open] > summary::before { transform: rotate(45deg); }
 .casilla input { width: 1.15rem; height: 1.15rem; margin: 0; accent-color: var(--boli); }
 
 .pie { max-width: 46rem; width: 100%; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; color: var(--tinta-suave); font-size: 0.88rem; border-top: 1px solid var(--linea); }
+
+/* Página de oposición, comunidades y áreas */
+.boton { display: inline-block; padding: 0.55rem 0.9rem; background: var(--subrayador); color: var(--sobre-subrayador); font-weight: 600; text-decoration: none; border-radius: 6px; }
+.boton:hover { filter: brightness(0.95); }
+.migas { margin: 0 0 0.75rem; font-size: 0.95rem; }
+.meta { color: var(--tinta-suave); margin: 0.4rem 0 1rem; }
+.mia { margin: 0.75rem 0 0; padding: 0.5rem 0.75rem; border-left: 4px solid var(--subrayador); background: var(--superficie); }
+
+.areas { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0 0.25rem; }
+.chip {
+  font: 500 0.875rem/1.2 var(--sans); color: var(--tinta); background: var(--superficie);
+  border: 1px solid var(--linea); border-radius: 999px; padding: 0.4rem 0.8rem; cursor: pointer; min-height: 2.25rem;
+}
+.chip:hover, .chip[aria-pressed="true"] { background: var(--subrayador); color: var(--sobre-subrayador); border-color: transparent; }
+
+.pestanas { display: flex; flex-wrap: wrap; gap: 0.25rem; margin: 1.25rem 0 0; border-bottom: 2px solid var(--linea); }
+.pestanas button {
+  font: 600 0.95rem/1.2 var(--sans); color: var(--tinta-suave); background: none; border: 0; cursor: pointer;
+  padding: 0.7rem 0.9rem; margin-bottom: -2px; border-bottom: 3px solid transparent; min-height: 2.75rem;
+}
+.pestanas button[aria-selected="true"] { color: var(--tinta); border-bottom-color: var(--subrayador); }
+.panel { padding-top: 1rem; }
+
+.temas { counter-reset: none; display: grid; gap: 0.35rem; }
+.temas label { display: grid; grid-template-columns: auto 2.25rem 1fr; gap: 0.5rem; align-items: baseline; padding: 0.45rem 0.6rem; background: var(--superficie); border: 1px solid var(--linea); border-radius: 6px; cursor: pointer; }
+.temas .num { font: 700 0.9rem var(--serif); color: var(--tinta-suave); }
+.temas input:checked ~ span:last-child { text-decoration: line-through; text-decoration-color: var(--subrayador); text-decoration-thickness: 3px; color: var(--tinta-suave); }
+
+.enlaces { display: grid; gap: 0.4rem; }
+.enlaces li { padding: 0.15rem 0; }
+.enlaces.grande li { display: grid; padding: 0.7rem 0.9rem; background: var(--superficie); border: 1px solid var(--linea); border-radius: 8px; }
+.enlaces.grande a { font: 600 1.05rem var(--serif); }
+.nota { color: var(--tinta-suave); font-size: 0.9rem; }
+.ficha-comunidad h2 { margin-top: 1.5rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .chip, .boton { transition: background-color 0.15s, filter 0.15s; }
+}
+
+.etiqueta-areas { margin: 1rem 0 0; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--tinta-suave); }

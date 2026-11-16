@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <status><code>200</code><text>ok</text></status>
+  <data>
+    <texto>
+      <bloque id="no" tipo="nota_inicial" titulo="[nota_inicial]">
+        <version fecha_publicacion="20110927" id_norma="BOE-A-1978-31229"><p class="nota_pie">Nota de la edición consolidada.</p></version>
+      </bloque>
+      <bloque id="ti" tipo="encabezado" titulo="Título I">
+        <version fecha_publicacion="19781229" id_norma="BOE-A-1978-31229"><p class="titulo">TÍTULO I</p></version>
+      </bloque>
+      <bloque id="a14" tipo="precepto" titulo="Artículo 14">
+        <version fecha_publicacion="19781229" id_norma="BOE-A-1978-31229">
+          <p class="articulo">Artículo 14.</p>
+          <p class="parrafo">Los españoles son iguales ante la ley.</p>
+        </version>
+      </bloque>
+      <bloque id="a135" tipo="precepto" titulo="Artículo 135">
+        <version fecha_publicacion="19781229" id_norma="BOE-A-1978-31229"><p class="articulo">Artículo 135.</p><p class="parrafo">Texto antiguo.</p></version>
+        <version fecha_publicacion="20110927" id_norma="BOE-A-2011-15210"><p class="articulo">Artículo 135.</p><p class="parrafo">Estabilidad presupuestaria.</p></version>
+      </bloque>
+      <bloque id="da1" tipo="precepto" titulo="Disposición adicional primera">
+        <version fecha_publicacion="19781229" id_norma="BOE-A-1978-31229"><p class="articulo">Disposición adicional primera.</p><p class="parrafo">La Constitución ampara y respeta los derechos históricos de los territorios forales.</p></version>
+      </bloque>
+      <bloque id="fi" tipo="firma" titulo="[firma]">
+        <version fecha_publicacion="19781229" id_norma="BOE-A-1978-31229"><p class="firma_rey">Palacio de las Cortes, a 27 de diciembre de 1978.</p></version>
+      </bloque>
+    </texto>
+  </data>
+</response>

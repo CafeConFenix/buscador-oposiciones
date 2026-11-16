@@ -64,3 +64,29 @@ def test_eventos_de_examen_junta_boe_y_aportaciones_ordenados():
     res = eventos_de_examen(boe, manuales)
     assert [e["fecha"] for e in res] == ["2027-01-30", "2027-03-14"]
     assert all(e["id"] != "B" for e in res)
+
+
+def test_un_error_inesperado_en_una_norma_no_impide_actualizar_las_demas(tmp_path, abrir_falso, cargar_bytes, capsys):
+    from oposiciones.actualizar import actualizar_normas
+
+    base = "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id"
+    cliente = BoeClient(
+        abrir_falso(
+            {
+                # primera norma: el índice llega con un cuerpo que no es JSON
+                f"{base}/ROTA/texto/indice": (200, b"<html>mantenimiento</html>"),
+                f"{base}/BOE-A-1978-31229/metadatos": (200, b'{"data":[{"titulo":"Constituci\\u00f3n Espa\\u00f1ola."}]}'),
+                f"{base}/BOE-A-1978-31229/texto/indice": (200, cargar_bytes("indice_lista.json")),
+                f"{base}/BOE-A-1978-31229/texto": (200, cargar_bytes("texto_completo.xml")),
+            }
+        )
+    )
+    normas = [
+        {"slug": "rota", "nombre": "Rota", "id": "ROTA", "referencia": "x"},
+        {"slug": "constitucion", "nombre": "Constitución", "id": "BOE-A-1978-31229", "referencia": "Constitución"},
+    ]
+    resumen = actualizar_normas(cliente, normas, tmp_path)
+    assert (tmp_path / "BOE-A-1978-31229.json").exists()
+    assert not (tmp_path / "ROTA.json").exists()
+    assert resumen == {"actualizadas": 1, "sin_cambios": 0, "con_error": 1}
+    assert "Rota" in capsys.readouterr().err
