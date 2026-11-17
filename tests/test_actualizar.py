@@ -1,3 +1,4 @@
+import json
 from datetime import date
 
 from oposiciones.actualizar import actualizar_convocatorias
@@ -90,3 +91,32 @@ def test_un_error_inesperado_en_una_norma_no_impide_actualizar_las_demas(tmp_pat
     assert not (tmp_path / "ROTA.json").exists()
     assert resumen == {"actualizadas": 1, "sin_cambios": 0, "con_error": 1}
     assert "Rota" in capsys.readouterr().err
+
+
+def test_las_convocatorias_guardan_plazo_fin_de_plazo_y_tasa(abrir_falso, cargar_json):
+    sumario = cargar_json("sumario_20261113.json")
+
+    def poner_xml(o):
+        if isinstance(o, dict):
+            if o.get("identificador") == "BOE-A-2026-20001":
+                o["url_xml"] = "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-20001"
+            for v in o.values():
+                poner_xml(v)
+        elif isinstance(o, list):
+            for v in o:
+                poner_xml(v)
+
+    poner_xml(sumario)
+    texto = (
+        "<documento><texto><p>El plazo de presentación de solicitudes será de veinte días hábiles, contados desde "
+        "el siguiente a la publicación.</p><p>La tasa por derechos de examen será de 12,38 euros.</p></texto></documento>"
+    ).encode()
+    cliente = BoeClient(abrir_falso({
+        f"{BASE}/boe/sumario/20261113": (200, json.dumps(sumario).encode()),
+        "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-20001": (200, texto),
+    }))
+    res = actualizar_convocatorias(cliente, hoy=date(2026, 11, 13), dias=1, existentes=[])
+    conv = next(c for c in res if c["id"] == "BOE-A-2026-20001")
+    assert conv["plazo"] == "20 días hábiles"
+    assert conv["fin_plazo"] == "2026-12-11"  # publicada el viernes 13-11
+    assert conv["tasa"] == 12.38
