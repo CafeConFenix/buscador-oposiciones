@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cafeconfenix.github.io/buscador-oposiciones/sitemap.xml

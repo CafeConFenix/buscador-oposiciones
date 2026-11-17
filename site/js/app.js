@@ -1,4 +1,7 @@
 import { buscarOposiciones, buscarArticulos, dividirResaltado, convocatoriasDe, esConsultaDeArticulo, urlPdfBoe, enlacesApuntes, convocatoriasDeComunidad } from "./busqueda.js";
+import { planificarEstudio, diasHasta } from "./plan.js";
+import { notaTest, costeOposicion } from "./calculadoras.js";
+import { construirMailto } from "./ayuda.js";
 import { construirEventos, agruparPorMes, filtrarEventos, formatearFecha, formatearDia } from "./calendario.js";
 
 const principal = document.getElementById("principal");
@@ -73,7 +76,7 @@ const restarDias = (iso, dias) => new Date(Date.parse(iso) - dias * 864e5).toISO
 /* ---------- datos ---------- */
 
 async function cargarDatos() {
-  const [oposiciones, normas, convocatorias, examenes, estado, recursos, enlacesEstado] = await Promise.all([
+  const [oposiciones, normas, convocatoriasBoe, examenes, estado, recursos, enlacesEstado, cambios, autonomicas, config] = await Promise.all([
     cargarJson("data/oposiciones.json", []),
     cargarJson("data/normas.json", []),
     cargarJson("data/convocatorias.json", []),
@@ -81,8 +84,12 @@ async function cargarDatos() {
     cargarJson("data/estado.json", null),
     cargarJson("data/recursos.json", { comunidades: [], estado: [], academias: [] }),
     cargarJson("data/enlaces_estado.json", {}),
+    cargarJson("data/cambios.json", []),
+    cargarJson("data/convocatorias_ccaa.json", []),
+    cargarJson("data/config.json", { contacto: "" }),
   ]);
-  return { oposiciones, normas, convocatorias, examenes, estado, recursos, enlacesEstado };
+  const convocatorias = [...convocatoriasBoe, ...autonomicas];
+  return { oposiciones, normas, convocatorias, examenes, estado, recursos, enlacesEstado, cambios, config };
 }
 
 // Un enlace solo se oculta si la comprobación diaria lo dio por caído; sin dato, se muestra.
@@ -237,7 +244,7 @@ function vistaOposicion(d, params, id) {
     principal.replaceChildren(h("h1", {}, "No encontramos esa oposición"), h("p", {}, h("a", { href: "#/" }, "Volver al buscador")));
     return;
   }
-  const pestanas = [["temario", "Temario"], ["normas", "Normas"], ["recursos", "Libros y apuntes"], ["fechas", "Fechas"]];
+  const pestanas = [["temario", "Temario"], ["plan", "Mi plan"], ["normas", "Normas"], ["recursos", "Libros y apuntes"], ["fechas", "Fechas"]];
   let activa = pestanas.some(([k]) => k === params.get("ver")) ? params.get("ver") : "temario";
   const nombresNorma = new Map(d.normas.map((n) => [n.slug, n]));
   const esMia = () => guardado.leer("mi-oposicion", null) === o.id;
@@ -254,7 +261,7 @@ function vistaOposicion(d, params, id) {
       type: "button", role: "tab", "aria-selected": String(k === activa),
       onclick: () => { activa = k; fijarParam(params, "ver", k, "temario"); pintar(); },
     }, t)));
-    cuerpo.replaceChildren(...{ temario: panelTemario, normas: panelNormas, recursos: panelRecursos, fechas: panelFechas }[activa]());
+    cuerpo.replaceChildren(...{ temario: panelTemario, plan: panelPlan, normas: panelNormas, recursos: panelRecursos, fechas: panelFechas }[activa]());
   }
 
   function panelTemario() {
@@ -288,6 +295,49 @@ function vistaOposicion(d, params, id) {
     return [nodo];
   }
 
+  function panelPlan() {
+    const clave = `plan-${o.id}`;
+    const guardadoPlan = guardado.leer(clave, {});
+    const proximo = convocatoriasDe(o, d.convocatorias).find((c) => c.fecha_examen && c.fecha_examen >= hoyISO());
+    const salida = h("div", { "aria-live": "polite" });
+    const campoExamen = h("input", { id: "fecha-examen", type: "date", min: hoyISO(), value: guardadoPlan.examen ?? proximo?.fecha_examen ?? "" });
+    const campoTemas = h("input", { id: "total-temas", type: "number", min: "1", max: "200", inputmode: "numeric", value: guardadoPlan.temas ?? "" });
+    cargarJson(`data/temarios/${o.id}.json`, null).then((t) => {
+      if (t && !campoTemas.value) { campoTemas.value = String(t.temas.length); calcular(); }
+    });
+
+    function calcular() {
+      const examen = campoExamen.value;
+      const totalTemas = Number(campoTemas.value);
+      guardado.escribir(clave, { examen, temas: totalTemas || "" });
+      if (!examen || !totalTemas) {
+        salida.replaceChildren(h("p", { class: "nota" }, "Indica la fecha de tu examen y cuántos temas tiene el temario para ver tu plan semana a semana."));
+        return;
+      }
+      const dias = diasHasta(examen, hoyISO());
+      const plan = planificarEstudio({ totalTemas, hoy: hoyISO(), examen });
+      salida.replaceChildren(
+        h("p", { class: "cuenta-atras" }, dias >= 0 ? `Faltan ${dias} ${dias === 1 ? "día" : "días"} para tu examen.` : "Esa fecha ya ha pasado."),
+        plan.aviso ? h("p", { class: "aviso" }, plan.aviso) : null,
+        h("ol", { class: "plan" }, plan.semanas.map((sem) => h("li", { class: sem.tipo },
+          h("span", { class: "fecha" }, `${formatearFecha(sem.desde)} – ${formatearFecha(sem.hasta)}`),
+          h("strong", {}, sem.tipo === "estudio"
+            ? (sem.temas[0] === sem.temas[1] ? `Tema ${sem.temas[0]}` : `Temas ${sem.temas[0]} a ${sem.temas[1]}`)
+            : "Repaso general y simulacros")))),
+        h("p", { class: "nota" }, "Las últimas semanas se reservan para repasar. Ajusta el ritmo a tus horas reales de estudio."),
+      );
+    }
+    campoExamen.addEventListener("input", calcular);
+    campoTemas.addEventListener("input", calcular);
+    calcular();
+    return [
+      proximo ? h("p", { class: "nota" }, `Fecha de examen publicada: ${formatearFecha(proximo.fecha_examen)}.`) : null,
+      h("div", { class: "campo corto" }, h("label", { for: "fecha-examen" }, h("span", {}, "Fecha de tu examen")), campoExamen),
+      h("div", { class: "campo corto" }, h("label", { for: "total-temas" }, h("span", {}, "Número de temas")), campoTemas),
+      salida,
+    ].filter(Boolean);
+  }
+
   function panelNormas() {
     const lista = (o.normas ?? []).filter((s) => nombresNorma.has(s));
     return [h("p", { class: "nota" }, "Busca artículo a artículo en el texto consolidado del BOE."),
@@ -305,13 +355,14 @@ function vistaOposicion(d, params, id) {
       h("h3", {}, "Enlaces oficiales"),
       h("ul", { class: "enlaces" }, [
         ...oficiales.map((e) => h("li", {}, h("a", { href: e.url, ...ENLACE_EXT }, e.titulo))),
-        ...d.recursos.estado.filter((e) => o.ambito === "Estado" && enlaceVivo(d, e.url))
+        ...d.recursos.estado.filter((e) => o.ambito === "Estado" && !["Seguridad", "Defensa"].includes(o.area) && enlaceVivo(d, e.url))
           .map((e) => h("li", {}, h("a", { href: e.url, ...ENLACE_EXT }, e.nombre), h("span", { class: "nota" }, ` · ${e.descripcion}`))),
       ]),
       h("h3", {}, "Libros, apuntes y tests"),
       h("ul", { class: "enlaces" }, [
-        ...propios.map((r) => h("li", {}, h("a", { href: r.url, ...ENLACE_EXT }, r.titulo), r.tipo ? ` (${r.tipo}${r.gratuito ? ", gratis" : ""})` : "")),
+        ...propios.map((r) => h("li", {}, h("a", { href: r.url, ...ENLACE_EXT }, r.titulo), h("span", { class: "nota" }, ` · ${[r.fuente, r.tipo].filter(Boolean).join(", ")}${r.gratuito ? " (gratis)" : ""}`))),
         h("li", {}, h("a", { href: libros, ...ENLACE_EXT }, "Buscar libros del temario")),
+        h("li", {}, h("a", { href: `https://www.google.com/search?q=${encodeURIComponent(`${o.nombre} exámenes oficiales anteriores filetype:pdf`)}`, ...ENLACE_EXT }, "Exámenes oficiales de años anteriores")),
         h("li", {}, h("a", { href: "https://www.boe.es/biblioteca_juridica/", ...ENLACE_EXT }, "Códigos legales gratuitos del BOE")),
       ]),
       h("h3", {}, "Academias con material de muestra"),
@@ -443,6 +494,14 @@ function vistaNormas(d, params) {
     h("div", { class: "campo" }, h("label", { for: "qn" }, h("span", {}, "Buscar dentro de la norma")), entrada),
   ], [
     cabeceraNorma, estado, resultados,
+    d.cambios.length ? h("h2", {}, "Novedades: normas modificadas") : null,
+    d.cambios.length ? h("ul", { class: "enlaces" }, d.cambios.slice(0, 10).map((c) => {
+      const dia = String(c.fecha).slice(0, 8);
+      const iso = /^\d{8}$/.test(dia) ? `${dia.slice(0, 4)}-${dia.slice(4, 6)}-${dia.slice(6, 8)}` : "";
+      const slug = d.normas.find((n) => n.id === c.id)?.slug;
+      return h("li", {}, iso ? h("span", { class: "fecha" }, `Actualizada el ${formatearFecha(iso)}`) : null,
+        slug ? h("a", { href: `#/normas?norma=${slug}` }, c.norma) : c.norma);
+    })) : null,
     h("h2", {}, "Descarga las normas completas"),
     h("p", { class: "nota" }, "PDF oficial del BOE con el texto consolidado, sin tener que leerlo en la web."),
     h("ul", { class: "descargas" }, d.normas.map((n) =>
@@ -470,6 +529,7 @@ function vistaCalendario(d, params) {
   let tipo = params.get("tipo") ?? "todos";
   let texto = params.get("q") ?? "";
   let antiguos = params.get("antiguos") === "1";
+  let comunidad = params.get("c") ?? "todas";
 
   const estado = h("p", { class: "estado", "aria-live": "polite" });
   const contenedor = h("div", {});
@@ -478,7 +538,7 @@ function vistaCalendario(d, params) {
     placeholder: "Filtrar por cuerpo, ministerio o comunidad",
     oninput: (e) => { texto = e.target.value; fijarParam(params, "q", texto.trim()); pintar(); },
   });
-  const tipos = [["todos", "Todo"], ["examen", "Exámenes"], ["convocatoria", "Convocatorias"]];
+  const tipos = [["todos", "Todo"], ["plazo", "Plazos"], ["examen", "Exámenes"], ["convocatoria", "Convocatorias"]];
   const filtros = h("fieldset", { class: "filtros" },
     h("legend", {}, "Mostrar"),
     tipos.flatMap(([valor, etiqueta]) => [
@@ -487,6 +547,10 @@ function vistaCalendario(d, params) {
       h("label", { for: `tipo-${valor}` }, etiqueta),
     ]),
   );
+  const selectorComunidad = h("select", { id: "comunidad-cal", onchange: (e) => { comunidad = e.target.value; fijarParam(params, "c", comunidad, "todas"); pintar(); } },
+    h("option", { value: "todas", selected: comunidad === "todas" }, "Todas las administraciones"),
+    h("option", { value: "estado", selected: comunidad === "estado" }, "Estado (BOE)"),
+    d.recursos.comunidades.map((c) => h("option", { value: c.id, selected: c.id === comunidad }, c.nombre)));
   const casilla = h("label", { class: "casilla" },
     h("input", { type: "checkbox", checked: antiguos,
       onchange: (e) => { antiguos = e.target.checked; fijarParam(params, "antiguos", antiguos ? "1" : ""); pintar(); } }),
@@ -496,7 +560,7 @@ function vistaCalendario(d, params) {
 
   function pintar() {
     const desde = antiguos ? "" : restarDias(hoyISO(), 30);
-    const eventos = filtrarEventos(todos, { tipo, texto, desde });
+    const eventos = filtrarEventos(todos, { tipo, texto, desde, comunidad });
     const meses = agruparPorMes(eventos);
     contenedor.replaceChildren(...meses.map((mes) =>
       h("section", { class: "mes" },
@@ -504,8 +568,8 @@ function vistaCalendario(d, params) {
         h("ol", {}, mes.eventos.map((e) => h("li", { class: `evento ${e.tipo}` },
           h("time", { datetime: e.fecha, title: formatearFecha(e.fecha) }, formatearDia(e.fecha)),
           h("div", {},
-            h("p", { class: "titulo" }, h("span", { class: "tipo" }, e.tipo === "examen" ? "Examen" : "Convocatoria"), marcar(resumirTitulo(e.titulo), texto)),
-            h("p", { class: "organismo" }, [e.organismo, e.fuente ? `Fuente: ${e.fuente}` : ""].filter(Boolean).join(". ")),
+            h("p", { class: "titulo" }, h("span", { class: "tipo" }, { examen: "Examen", plazo: "Fin de plazo", convocatoria: "Convocatoria" }[e.tipo]), marcar(resumirTitulo(e.titulo), texto)),
+            h("p", { class: "organismo" }, [e.organismo, e.plazo ? `Plazo: ${e.plazo} (orientativo)` : "", e.tasa != null ? `Tasa: ${e.tasa.toLocaleString("es-ES", { minimumFractionDigits: 2 })} €` : "", e.fuente ? `Fuente: ${e.fuente}` : ""].filter(Boolean).join(". ")),
             e.url ? h("a", { href: e.url, rel: "noopener" }, "Ver el anuncio oficial") : null))))),
     ));
     if (eventos.length) estado.textContent = `${eventos.length} ${eventos.length === 1 ? "fecha" : "fechas"}.`;
@@ -517,13 +581,97 @@ function vistaCalendario(d, params) {
   pagina([
     h("h1", {}, "Calendario de convocatorias y exámenes"),
     h("p", { class: "intro" }, "Las convocatorias se toman del BOE cada día y las fechas de examen, de los anuncios oficiales de admitidos."),
-    h("p", { class: "suscripcion" }, h("a", { class: "boton", href: urlIcs.href.replace(/^https?:/, "webcal:") }, "Añadir los exámenes a mi calendario")),
+    h("p", { class: "suscripcion" }, h("a", { class: "boton", href: urlIcs.href.replace(/^https?:/, "webcal:") }, "Añadir los exámenes a mi calendario"), " ",
+      h("a", { href: "data/convocatorias.xml" }, "Recibir avisos de nuevas convocatorias (RSS)")),
   ], [
     h("div", { class: "campo" }, h("label", { for: "qc" }, h("span", {}, "Buscar")), entrada),
+    h("div", { class: "campo" }, h("label", { for: "comunidad-cal" }, h("span", {}, "Administración")), selectorComunidad),
     filtros, casilla, estado, contenedor,
     h("p", { class: "aviso" }, "Cada comunidad, ayuntamiento y universidad publica en su propio boletín, así que sus fechas pueden no aparecer aquí. Consulta siempre el boletín oficial de tu convocatoria."),
   ]);
   pintar();
+}
+
+/* ---------- vista: herramientas ---------- */
+
+function campoNumero(id, etiqueta, valor, alCambiar, paso = "any") {
+  const entrada = h("input", { id, type: "number", inputmode: "decimal", min: "0", step: paso, value: valor, oninput: alCambiar });
+  return h("div", { class: "campo corto" }, h("label", { for: id }, h("span", {}, etiqueta)), entrada);
+}
+
+const euros = (n) => `${n.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
+
+function vistaHerramientas() {
+  const v = guardado.leer("herramientas", { aciertos: "", errores: "", blancos: "", penal: "0.3333", tasa: "", academia: "", meses: "", material: "", viajes: "", costeViaje: "" });
+  const resNota = h("p", { class: "resultado", "aria-live": "polite" });
+  const resCoste = h("p", { class: "resultado", "aria-live": "polite" });
+  const cambia = (clave) => (e) => { v[clave] = e.target.value; guardado.escribir("herramientas", v); calcular(); };
+
+  function calcular() {
+    const n = notaTest({ aciertos: v.aciertos, errores: v.errores, blancos: v.blancos, penalizacion: Number(v.penal) });
+    resNota.textContent = n.nota === null ? "Escribe tus aciertos, errores y respuestas en blanco."
+      : `Nota: ${n.nota.toLocaleString("es-ES")} sobre 10 (${n.puntos.toLocaleString("es-ES")} puntos netos de ${n.preguntas} preguntas).`;
+    const c = costeOposicion({ tasa: v.tasa, academiaMes: v.academia, meses: v.meses, material: v.material, viajes: v.viajes, costeViaje: v.costeViaje });
+    resCoste.textContent = c.total === 0 ? "Rellena lo que te corresponda para ver el coste total."
+      : `Coste total: ${euros(c.total)}${c.porMes ? ` (unos ${euros(c.porMes)} al mes)` : ""}.`;
+  }
+
+  const penal = h("select", { id: "penal", onchange: cambia("penal") },
+    [["0.3333", "Cada 3 errores restan 1 acierto"], ["0.25", "Cada 4 errores restan 1 acierto"], ["0.5", "Cada 2 errores restan 1 acierto"], ["0", "Los errores no penalizan"]]
+      .map(([valor, texto]) => h("option", { value: valor, selected: valor === v.penal }, texto)));
+
+  pagina([
+    h("h1", {}, "Herramientas para opositores"),
+    h("p", { class: "intro" }, "Calcula la nota de un simulacro y cuánto te costará preparar la oposición."),
+  ], [
+    h("h2", { class: "primero" }, "Nota de un test"),
+    h("div", { class: "campo" }, h("label", { for: "penal" }, h("span", {}, "Penalización de los errores")), penal),
+    h("div", { class: "fila-campos" },
+      campoNumero("aciertos", "Aciertos", v.aciertos, cambia("aciertos"), "1"),
+      campoNumero("errores", "Errores", v.errores, cambia("errores"), "1"),
+      campoNumero("blancos", "En blanco", v.blancos, cambia("blancos"), "1")),
+    resNota,
+    h("h2", {}, "Coste de la oposición"),
+    h("div", { class: "fila-campos" },
+      campoNumero("tasa", "Tasa de examen (€)", v.tasa, cambia("tasa")),
+      campoNumero("academia", "Academia al mes (€)", v.academia, cambia("academia")),
+      campoNumero("meses", "Meses de preparación", v.meses, cambia("meses"), "1"),
+      campoNumero("material", "Libros y material (€)", v.material, cambia("material")),
+      campoNumero("viajes", "Viajes a exámenes", v.viajes, cambia("viajes"), "1"),
+      campoNumero("coste-viaje", "Coste por viaje (€)", v.costeViaje, cambia("costeViaje"))),
+    resCoste,
+    h("h2", {}, "Plan de estudio"),
+    h("p", {}, "Está en la página de cada oposición, en la pestaña «Mi plan»: ", h("a", { href: "#/" }, "busca la tuya"), "."),
+  ]);
+  calcular();
+}
+
+/* ---------- vista: sugerencias ---------- */
+
+function vistaAyuda(d) {
+  const campos = { tipo: "Sugerir un recurso", oposicion: "", enlace: "", mensaje: "" };
+  const enlace = h("a", { class: "boton", href: "#", "aria-disabled": "true" }, "Preparar el correo");
+  const refrescar = () => {
+    const url = campos.mensaje.trim() ? construirMailto(d.config.contacto, campos) : "";
+    enlace.setAttribute("href", url || "#");
+    enlace.setAttribute("aria-disabled", String(!url));
+  };
+  const texto = (clave) => (e) => { campos[clave] = e.target.value; refrescar(); };
+  pagina([
+    h("h1", {}, "Sugerencias y correcciones"),
+    h("p", { class: "intro" }, "¿Echas en falta un libro, una web oficial o una oposición? ¿Hay un dato mal? Cuéntanoslo."),
+  ], [
+    h("div", { class: "campo" }, h("label", { for: "tipo" }, h("span", {}, "¿Qué quieres contarnos?")),
+      h("select", { id: "tipo", onchange: texto("tipo") }, ["Sugerir un recurso", "Avisar de un error", "Pedir una oposición nueva", "Otra cosa"].map((t) => h("option", {}, t)))),
+    h("div", { class: "campo" }, h("label", { for: "opo" }, h("span", {}, "Oposición (opcional)")),
+      h("input", { id: "opo", type: "text", list: "lista-opos", oninput: texto("oposicion") }),
+      h("datalist", { id: "lista-opos" }, d.oposiciones.map((o) => h("option", { value: o.nombre })))),
+    h("div", { class: "campo" }, h("label", { for: "enlace-sug" }, h("span", {}, "Enlace (opcional)")), h("input", { id: "enlace-sug", type: "url", placeholder: "https://", oninput: texto("enlace") })),
+    h("div", { class: "campo" }, h("label", { for: "mensaje" }, h("span", {}, "Mensaje")),
+      h("textarea", { id: "mensaje", rows: "5", oninput: texto("mensaje") })),
+    h("p", {}, enlace),
+    h("p", { class: "nota" }, "Se abrirá tu programa de correo con el mensaje listo para enviar."),
+  ]);
 }
 
 /* ---------- arranque ---------- */
@@ -540,9 +688,11 @@ async function pintarRuta() {
     "/normas": "Normas y documentos troncales | Oposiciones de España",
     "/calendario": "Calendario de oposiciones | Oposiciones de España",
     "/comunidades": "Tu comunidad autónoma | Oposiciones de España",
+    "/herramientas": "Herramientas para opositores | Oposiciones de España",
+    "/ayuda": "Sugerencias y correcciones | Oposiciones de España",
   }[ruta] ?? "Oposiciones de España: temarios, normas y calendario";
   if (ruta.startsWith("/oposicion/")) { vistaOposicion(datos, params, decodeURIComponent(ruta.slice(11))); return; }
-  const vista = { "/": vistaOposiciones, "/normas": vistaNormas, "/calendario": vistaCalendario, "/comunidades": vistaComunidades }[ruta] ?? vistaOposiciones;
+  const vista = { "/": vistaOposiciones, "/normas": vistaNormas, "/calendario": vistaCalendario, "/comunidades": vistaComunidades, "/herramientas": vistaHerramientas, "/ayuda": vistaAyuda }[ruta] ?? vistaOposiciones;
   vista(datos, params);
 }
 
@@ -552,6 +702,7 @@ async function iniciar() {
     document.getElementById("pie-datos").textContent =
       `Datos del BOE actualizados el ${formatearFecha(datos.estado.actualizado.slice(0, 10))}. Fuente: Agencia Estatal Boletín Oficial del Estado.`;
   }
+  if (datos.config?.contacto) document.getElementById("enlace-ayuda").hidden = false;
   await pintarRuta();
   window.addEventListener("hashchange", () => { pintarRuta(); window.scrollTo(0, 0); });
 }

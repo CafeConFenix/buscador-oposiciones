@@ -1,10 +1,11 @@
-import { normalizar } from "./busqueda.js";
+import { normalizar, comunidadDe } from "./busqueda.js";
 
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 
 /**
  * Eventos del calendario:
  *  - "convocatoria": día en que el BOE publica la convocatoria de un proceso selectivo.
+ *  - "plazo": último día (orientativo) para presentar la solicitud de una convocatoria.
  *  - "examen": fecha de un ejercicio, leída del anuncio del BOE o aportada en data/examenes.json.
  * Los concursos de traslado y otros anuncios no son oposiciones y no entran.
  */
@@ -12,10 +13,13 @@ export function construirEventos(convocatorias, examenes) {
   const eventos = [];
   for (const c of convocatorias) {
     if (c.tipo === "convocatoria") {
-      eventos.push({ fecha: c.fecha, tipo: "convocatoria", titulo: c.titulo, organismo: c.organismo, url: c.url_html, fuente: "BOE" });
+      eventos.push({ fecha: c.fecha, tipo: "convocatoria", titulo: c.titulo, organismo: c.organismo, url: c.url_html, fuente: c.fuente ?? "BOE" });
+    }
+    if (c.tipo === "convocatoria" && c.fin_plazo) {
+      eventos.push({ fecha: c.fin_plazo, tipo: "plazo", titulo: c.titulo, organismo: c.organismo, url: c.url_html, fuente: c.fuente ?? "BOE", plazo: c.plazo, tasa: c.tasa });
     }
     if (c.fecha_examen) {
-      eventos.push({ fecha: c.fecha_examen, tipo: "examen", titulo: c.titulo, organismo: c.organismo, url: c.url_html, fuente: "BOE" });
+      eventos.push({ fecha: c.fecha_examen, tipo: "examen", titulo: c.titulo, organismo: c.organismo, url: c.url_html, fuente: c.fuente ?? "BOE" });
     }
   }
   for (const e of examenes) {
@@ -37,12 +41,13 @@ export function agruparPorMes(eventos) {
   return [...meses.values()].sort((a, b) => a.clave.localeCompare(b.clave));
 }
 
-export function filtrarEventos(eventos, { tipo = "todos", texto = "", desde = "" } = {}) {
+export function filtrarEventos(eventos, { tipo = "todos", texto = "", desde = "", comunidad = "todas" } = {}) {
   const q = normalizar(texto);
   return eventos.filter(
     (e) =>
       (tipo === "todos" || e.tipo === tipo) &&
       (!desde || e.fecha >= desde) &&
+      (comunidad === "todas" || (comunidad === "estado" ? !comunidadDe(e) : comunidadDe(e) === comunidad)) &&
       (!q || normalizar(`${e.titulo} ${e.organismo}`).includes(q)),
   );
 }

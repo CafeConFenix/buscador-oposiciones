@@ -38,7 +38,22 @@
     "url": "https://www.inap.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Cómo es el test oficial de Auxiliar Administrativo del Estado",
+    "url": "https://blog.opositatest.com/test-auxiliar-administrativo-estado",
+    "tipo": "Guía del examen",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Auxiliar Administrativo del Estado",
+    "url": "https://preparaoposiciones.com/blog/temario/auxiliar-administrativo-estado/",
+    "tipo": "Temario",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-general-administrativo-de-la-administracion-del-estado",
@@ -486,7 +501,15 @@
     "url": "https://www.boe.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Guía de las oposiciones de Técnicos de Hacienda",
+    "url": "https://preparaoposiciones.com/blog/guias/oposiciones-tecnicos-hacienda-guia/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-superior-de-inspectores-de-hacienda-del-estado",
@@ -558,7 +581,22 @@
     "url": "https://www.boe.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Temario de Agentes de Hacienda Pública (descarga gratuita)",
+    "url": "https://www.adams.es/recursos-descargas/temario-agentes-hacienda-publica-gratis/",
+    "tipo": "Temario",
+    "fuente": "Adams",
+    "gratuito": true
+   },
+   {
+    "titulo": "Exámenes anteriores resueltos de Agentes de Hacienda",
+    "url": "https://blog.opositatest.com/agentes-hacienda-examenes-anteriores-resueltos/",
+    "tipo": "Exámenes resueltos",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-administrativo-de-la-administracion-de-la-seguridad-social",
@@ -674,7 +712,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Descargar exámenes oficiales de Justicia",
+    "url": "https://blog.opositatest.com/descargar-examenes-oficiales-oposiciones-justicia",
+    "tipo": "Exámenes oficiales",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Oposiciones del Ministerio de Justicia",
+    "url": "https://www.adams.es/oposiciones/ministerio-de-justicia/",
+    "tipo": "Guía",
+    "fuente": "Adams",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-tramitacion-procesal-y-administrativa",
@@ -711,7 +764,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Descargar exámenes oficiales de Justicia",
+    "url": "https://blog.opositatest.com/descargar-examenes-oficiales-oposiciones-justicia",
+    "tipo": "Exámenes oficiales",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Oposiciones del Ministerio de Justicia",
+    "url": "https://www.adams.es/oposiciones/ministerio-de-justicia/",
+    "tipo": "Guía",
+    "fuente": "Adams",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-gestion-procesal-y-administrativa",
@@ -748,7 +816,29 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Descargar exámenes oficiales de Justicia",
+    "url": "https://blog.opositatest.com/descargar-examenes-oficiales-oposiciones-justicia",
+    "tipo": "Exámenes oficiales",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Oposiciones del Ministerio de Justicia",
+    "url": "https://www.adams.es/oposiciones/ministerio-de-justicia/",
+    "tipo": "Guía",
+    "fuente": "Adams",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Gestión Procesal",
+    "url": "https://preparaoposiciones.com/blog/temario/gestion-procesal/",
+    "tipo": "Temario",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "carrera-judicial-y-fiscal",
@@ -960,7 +1050,29 @@
     "url": "https://www.boe.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Pruebas de selección de la Escala Básica",
+    "url": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/empleo-publico/oposiciones/policia-nacional/escala-basica/pruebas-de-seleccion/",
+    "tipo": "Información oficial",
+    "fuente": "Ministerio del Interior",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Policía Nacional (Escala Básica)",
+    "url": "https://blog.opositatest.com/temario-oposicion-policia-nacional-escala-basica/",
+    "tipo": "Temario",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de la oposición de Policía Nacional",
+    "url": "https://preparaoposiciones.com/blog/oposiciones/policia-nacional/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "policia-nacional-escala-ejecutiva",
@@ -995,7 +1107,29 @@
     "url": "https://www.boe.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Pruebas de selección de la Escala Básica",
+    "url": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/empleo-publico/oposiciones/policia-nacional/escala-basica/pruebas-de-seleccion/",
+    "tipo": "Información oficial",
+    "fuente": "Ministerio del Interior",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Policía Nacional (Escala Básica)",
+    "url": "https://blog.opositatest.com/temario-oposicion-policia-nacional-escala-basica/",
+    "tipo": "Temario",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de la oposición de Policía Nacional",
+    "url": "https://preparaoposiciones.com/blog/oposiciones/policia-nacional/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "guardia-civil-cabos-y-guardias",
@@ -1030,7 +1164,29 @@
     "url": "https://www.boe.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Resolución que modifica el temario de las pruebas (Guardia Civil)",
+    "url": "https://web.guardiacivil.es/export/sites/guardiaCivil/documentos/pdfs/2022/IngresoGC2022/RESOLUCION-DGGC-CON-ANEXO-MODIFICA-TEMARIO-PRUEBAS-ECG-GC.pdf",
+    "tipo": "Documento oficial (2022)",
+    "fuente": "Guardia Civil",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Guardia Civil",
+    "url": "https://preparaoposiciones.com/blog/temario/guardia-civil/",
+    "tipo": "Temario",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de la oposición de Guardia Civil",
+    "url": "https://redopositor.com/guia-guardia-civil-2026/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-ayudantes-de-instituciones-penitenciarias",
@@ -1225,7 +1381,29 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Temario de Policía Local",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-policia-local-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Policía Local por comunidades",
+    "url": "https://oposiciones.es/oposiciones-policia-local/temario/",
+    "tipo": "Temario",
+    "fuente": "Oposiciones.es",
+    "gratuito": true
+   },
+   {
+    "titulo": "Exámenes y tests de Policía Local",
+    "url": "https://mad.es/blog/categoria/oposiciones-fuerzas-cuerpos-seguridad/policia-local/",
+    "tipo": "Exámenes",
+    "fuente": "MAD",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "bombero",
@@ -1282,7 +1460,29 @@
     "url": "https://www.correos.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Temario de Correos",
+    "url": "https://preparaoposiciones.com/blog/temario/correos/",
+    "tipo": "Temario",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Correos desde cero",
+    "url": "https://redopositor.com/blog/temario-correos-desde-cero/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Cómo trabajar en Correos",
+    "url": "https://blog.opositatest.com/como-trabajar-correos/",
+    "tipo": "Guía",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-maestros",
@@ -1320,7 +1520,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-profesores-de-ensenanza-secundaria",
@@ -1355,7 +1570,36 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-profesores-tecnicos-de-formacion-profesional",
@@ -1388,7 +1632,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-profesores-de-escuelas-oficiales-de-idiomas",
@@ -1421,7 +1680,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "cuerpo-de-inspectores-de-educacion",
@@ -1453,7 +1727,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "enfermero-a-de-servicios-de-salud",
@@ -1492,7 +1781,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Oposiciones de Enfermería",
+    "url": "https://preparaoposiciones.com/blog/oposiciones/enfermeria/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   },
+   {
+    "titulo": "Tests de Enfermería",
+    "url": "https://oposiciones.es/oposiciones-enfermeria/test/",
+    "tipo": "Tests",
+    "fuente": "Oposiciones.es",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "tecnico-en-cuidados-auxiliares-de-enfermeria-tcae",
@@ -1524,7 +1828,22 @@
     "url": "https://administracion.gob.es"
    }
   ],
-  "recursos": []
+  "recursos": [
+   {
+    "titulo": "Guía de las oposiciones de TCAE",
+    "url": "https://redopositor.com/blog/es-oposiciones-tcae-auxiliar-enfermeria-2026/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Oposiciones de Auxiliar de Enfermería (TCAE)",
+    "url": "https://preparaoposiciones.com/blog/oposiciones/auxiliar-enfermeria-tcae/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
  },
  {
   "id": "celador-a-de-servicios-de-salud",
@@ -1947,6 +2266,3958 @@
    "ley-39-2015",
    "ley-40-2015",
    "lcsp",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "facultativo-especialista-de-area-medico-especialista",
+  "nombre": "Facultativo Especialista de Área (médico especialista)",
+  "aliases": [
+   "FEA",
+   "Médico especialista",
+   "Médico de hospital"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "medico-de-familia-de-atencion-primaria",
+  "nombre": "Médico de Familia de Atención Primaria",
+  "aliases": [
+   "Médico de familia",
+   "Médico de cabecera",
+   "Médico de atención primaria"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "farmaceutico-de-servicios-de-salud",
+  "nombre": "Farmacéutico de servicios de salud",
+  "aliases": [
+   "Farmacéutico",
+   "Farmacia hospitalaria"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "psicologo-de-servicios-de-salud",
+  "nombre": "Psicólogo de servicios de salud",
+  "aliases": [
+   "Psicólogo clínico",
+   "Psicología"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-en-emergencias-sanitarias-tes",
+  "nombre": "Técnico en Emergencias Sanitarias (TES)",
+  "aliases": [
+   "TES",
+   "Técnico de ambulancias",
+   "Técnico de emergencias"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "trabajador-a-social",
+  "nombre": "Trabajador/a Social",
+  "aliases": [
+   "Trabajo social",
+   "Trabajador social"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "educador-a-social",
+  "nombre": "Educador/a Social",
+  "aliases": [
+   "Educación social"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "agente-forestal-y-medioambiental",
+  "nombre": "Agente Forestal y Medioambiental",
+  "aliases": [
+   "Agente forestal",
+   "Agente de medio ambiente",
+   "Guarda forestal"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "guardia-civil-escala-de-oficiales",
+  "nombre": "Guardia Civil - Escala de Oficiales",
+  "aliases": [
+   "Oficial de la Guardia Civil",
+   "Academia de Oficiales Guardia Civil"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Guardia Civil"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpos-de-ingenieros-del-estado",
+  "nombre": "Cuerpos de Ingenieros del Estado",
+  "aliases": [
+   "Ingeniero de Caminos del Estado",
+   "Ingeniero Agrónomo del Estado",
+   "Ingeniero de Montes del Estado",
+   "Ingeniero Industrial del Estado"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Cuerpo de Ingenieros"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-profesores-de-musica-y-artes-escenicas",
+  "nombre": "Cuerpo de Profesores de Música y Artes Escénicas",
+  "aliases": [
+   "Profesor de música",
+   "Profesor de artes escénicas"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-tecnico-de-servicios-a-la-comunidad-ptsc",
+  "nombre": "Profesor Técnico de Servicios a la Comunidad (PTSC)",
+  "aliases": [
+   "PTSC",
+   "Servicios a la comunidad"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "cuerpo-general-subalterno-ordenanza",
+  "nombre": "Cuerpo General Subalterno (ordenanza)",
+  "aliases": [
+   "Subalterno",
+   "Ordenanza",
+   "Conserje"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "AP",
+  "boe": [
+   "Cuerpo General Subalterno"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-superior-de-interventores-y-auditores-del-estado",
+  "nombre": "Cuerpo Superior de Interventores y Auditores del Estado",
+  "aliases": [
+   "Interventor del Estado",
+   "Auditor del Estado"
+  ],
+  "area": "Hacienda",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Interventores y Auditores"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lgp",
+   "lgt",
+   "lcsp"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "profesor-de-secundaria-lengua-castellana-y-literatura",
+  "nombre": "Profesor de Secundaria: Lengua Castellana y Literatura",
+  "aliases": [
+   "Secundaria Lengua Castellana y Literatura",
+   "Profesor de Lengua Castellana y Literatura",
+   "PES Lengua Castellana y Literatura"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-matematicas",
+  "nombre": "Profesor de Secundaria: Matemáticas",
+  "aliases": [
+   "Secundaria Matemáticas",
+   "Profesor de Matemáticas",
+   "PES Matemáticas"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-ingles",
+  "nombre": "Profesor de Secundaria: Inglés",
+  "aliases": [
+   "Secundaria Inglés",
+   "Profesor de Inglés",
+   "PES Inglés"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-frances",
+  "nombre": "Profesor de Secundaria: Francés",
+  "aliases": [
+   "Secundaria Francés",
+   "Profesor de Francés",
+   "PES Francés"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-educacion-fisica",
+  "nombre": "Profesor de Secundaria: Educación Física",
+  "aliases": [
+   "Secundaria Educación Física",
+   "Profesor de Educación Física",
+   "PES Educación Física"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-biologia-y-geologia",
+  "nombre": "Profesor de Secundaria: Biología y Geología",
+  "aliases": [
+   "Secundaria Biología y Geología",
+   "Profesor de Biología y Geología",
+   "PES Biología y Geología"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-fisica-y-quimica",
+  "nombre": "Profesor de Secundaria: Física y Química",
+  "aliases": [
+   "Secundaria Física y Química",
+   "Profesor de Física y Química",
+   "PES Física y Química"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-geografia-e-historia",
+  "nombre": "Profesor de Secundaria: Geografía e Historia",
+  "aliases": [
+   "Secundaria Geografía e Historia",
+   "Profesor de Geografía e Historia",
+   "PES Geografía e Historia"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-filosofia",
+  "nombre": "Profesor de Secundaria: Filosofía",
+  "aliases": [
+   "Secundaria Filosofía",
+   "Profesor de Filosofía",
+   "PES Filosofía"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-economia",
+  "nombre": "Profesor de Secundaria: Economía",
+  "aliases": [
+   "Secundaria Economía",
+   "Profesor de Economía",
+   "PES Economía"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-informatica",
+  "nombre": "Profesor de Secundaria: Informática",
+  "aliases": [
+   "Secundaria Informática",
+   "Profesor de Informática",
+   "PES Informática"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-tecnologia",
+  "nombre": "Profesor de Secundaria: Tecnología",
+  "aliases": [
+   "Secundaria Tecnología",
+   "Profesor de Tecnología",
+   "PES Tecnología"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-dibujo",
+  "nombre": "Profesor de Secundaria: Dibujo",
+  "aliases": [
+   "Secundaria Dibujo",
+   "Profesor de Dibujo",
+   "PES Dibujo"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-musica",
+  "nombre": "Profesor de Secundaria: Música",
+  "aliases": [
+   "Secundaria Música",
+   "Profesor de Música",
+   "PES Música"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-orientacion-educativa",
+  "nombre": "Profesor de Secundaria: Orientación Educativa",
+  "aliases": [
+   "Secundaria Orientación Educativa",
+   "Profesor de Orientación Educativa",
+   "PES Orientación Educativa"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-latin-y-griego",
+  "nombre": "Profesor de Secundaria: Latín y Griego",
+  "aliases": [
+   "Secundaria Latín y Griego",
+   "Profesor de Latín y Griego",
+   "PES Latín y Griego"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "profesor-de-secundaria-formacion-y-orientacion-laboral",
+  "nombre": "Profesor de Secundaria: Formación y Orientación Laboral",
+  "aliases": [
+   "Secundaria Formación y Orientación Laboral",
+   "Profesor de Formación y Orientación Laboral",
+   "PES Formación y Orientación Laboral"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de Profesor de Secundaria",
+    "url": "https://redopositor.com/guia-profesor-secundaria/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Secundaria por bloques y especialidades",
+    "url": "https://redopositor.com/blog/es-temario-profesor-secundaria-2026-bloques-especialidades/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-educacion-infantil",
+  "nombre": "Maestro: Educación Infantil",
+  "aliases": [
+   "Maestro de Educación Infantil",
+   "Maestro Educación Infantil"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-educacion-primaria",
+  "nombre": "Maestro: Educación Primaria",
+  "aliases": [
+   "Maestro de Educación Primaria",
+   "Maestro Educación Primaria"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-ingles",
+  "nombre": "Maestro: Inglés",
+  "aliases": [
+   "Maestro de Inglés",
+   "Maestro Inglés"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-frances",
+  "nombre": "Maestro: Francés",
+  "aliases": [
+   "Maestro de Francés",
+   "Maestro Francés"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-educacion-fisica",
+  "nombre": "Maestro: Educación Física",
+  "aliases": [
+   "Maestro de Educación Física",
+   "Maestro Educación Física"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-musica",
+  "nombre": "Maestro: Música",
+  "aliases": [
+   "Maestro de Música",
+   "Maestro Música"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-pedagogia-terapeutica",
+  "nombre": "Maestro: Pedagogía Terapéutica",
+  "aliases": [
+   "Maestro de Pedagogía Terapéutica",
+   "Maestro Pedagogía Terapéutica"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "maestro-audicion-y-lenguaje",
+  "nombre": "Maestro: Audición y Lenguaje",
+  "aliases": [
+   "Maestro de Audición y Lenguaje",
+   "Maestro Audición y Lenguaje"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "cuerpo-de-profesores-de-artes-plasticas-y-diseno",
+  "nombre": "Cuerpo de Profesores de Artes Plásticas y Diseño",
+  "aliases": [
+   "Profesor de artes plásticas",
+   "Profesor de diseño"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "tecnico-de-educacion-infantil-0-a-3-anos",
+  "nombre": "Técnico de Educación Infantil (0 a 3 años)",
+  "aliases": [
+   "Educador infantil",
+   "Escuela infantil",
+   "Técnico en educación infantil"
+  ],
+  "area": "Educación",
+  "ambito": "Local",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "cuerpo-de-catedraticos-de-ensenanza-secundaria",
+  "nombre": "Cuerpo de Catedráticos de Enseñanza Secundaria",
+  "aliases": [
+   "Catedrático de secundaria",
+   "Acceso a catedrático"
+  ],
+  "area": "Educación",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "loe",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones docentes: temario y plazas por comunidad",
+    "url": "https://redopositor.com/blog/es-oposiciones-docentes-2026-temario-plazas/",
+    "tipo": "Guía",
+    "fuente": "Redopositor",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de oposiciones de Educación",
+    "url": "https://redopositor.com/blog/es-temario-oposiciones-educacion-2026/",
+    "tipo": "Temario",
+    "fuente": "Redopositor",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "terapeuta-ocupacional-de-servicios-de-salud",
+  "nombre": "Terapeuta Ocupacional de servicios de salud",
+  "aliases": [
+   "Terapeuta ocupacional",
+   "TO"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "logopeda-de-servicios-de-salud",
+  "nombre": "Logopeda de servicios de salud",
+  "aliases": [
+   "Logopeda",
+   "Logopedia"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "dietista-nutricionista-de-servicios-de-salud",
+  "nombre": "Dietista-Nutricionista de servicios de salud",
+  "aliases": [
+   "Dietista",
+   "Nutricionista"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "odontologo-de-servicios-de-salud",
+  "nombre": "Odontólogo de servicios de salud",
+  "aliases": [
+   "Odontólogo",
+   "Estomatólogo",
+   "Dentista"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "veterinario-de-salud-publica",
+  "nombre": "Veterinario de Salud Pública",
+  "aliases": [
+   "Veterinario",
+   "Veterinario oficial"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "biologo-de-servicios-de-salud",
+  "nombre": "Biólogo de servicios de salud",
+  "aliases": [
+   "Biólogo",
+   "Facultativo laboratorio"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "podologo-de-servicios-de-salud",
+  "nombre": "Podólogo de servicios de salud",
+  "aliases": [
+   "Podólogo",
+   "Podología"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "optico-optometrista-de-servicios-de-salud",
+  "nombre": "Óptico-Optometrista de servicios de salud",
+  "aliases": [
+   "Óptico",
+   "Optometrista"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "radiofisico-hospitalario",
+  "nombre": "Radiofísico Hospitalario",
+  "aliases": [
+   "Radiofísica",
+   "Físico médico"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "pediatra-de-atencion-primaria",
+  "nombre": "Pediatra de Atención Primaria",
+  "aliases": [
+   "Pediatra",
+   "Pediatra de cabecera"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "medico-de-urgencias-y-emergencias-061",
+  "nombre": "Médico de Urgencias y Emergencias (061)",
+  "aliases": [
+   "Médico de urgencias",
+   "Médico 061",
+   "Médico de emergencias"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "medico-inspector-inspeccion-medica",
+  "nombre": "Médico Inspector (Inspección Médica)",
+  "aliases": [
+   "Inspector médico",
+   "Inspección sanitaria"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "enfermero-a-especialista-pediatria-salud-mental-geriatria",
+  "nombre": "Enfermero/a especialista (pediatría, salud mental, geriatría…)",
+  "aliases": [
+   "Enfermera especialista",
+   "Enfermería pediátrica",
+   "Enfermería salud mental"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Oposiciones de Enfermería",
+    "url": "https://preparaoposiciones.com/blog/oposiciones/enfermeria/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   },
+   {
+    "titulo": "Tests de Enfermería",
+    "url": "https://oposiciones.es/oposiciones-enfermeria/test/",
+    "tipo": "Tests",
+    "fuente": "Oposiciones.es",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "tecnico-de-funcion-administrativa-de-servicios-de-salud",
+  "nombre": "Técnico de Función Administrativa de servicios de salud",
+  "aliases": [
+   "TFA",
+   "Técnico función administrativa"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "administrativo-de-servicios-de-salud",
+  "nombre": "Administrativo de servicios de salud",
+  "aliases": [
+   "Administrativo SES",
+   "Administrativo SAS",
+   "Administrativo Sermas"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cocinero-a-de-servicios-de-salud",
+  "nombre": "Cocinero/a de servicios de salud",
+  "aliases": [
+   "Cocinero hospital",
+   "Cocinero SES"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "personal-de-oficios-y-mantenimiento-de-servicios-de-salud",
+  "nombre": "Personal de oficios y mantenimiento de servicios de salud",
+  "aliases": [
+   "Mantenimiento hospital",
+   "Electricista hospital",
+   "Oficios"
+  ],
+  "area": "Sanidad",
+  "ambito": "Autonómica",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-general-sanidad",
+   "lops",
+   "ley-cohesion",
+   "trebep",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "agente-de-movilidad",
+  "nombre": "Agente de Movilidad",
+  "aliases": [
+   "Agente de movilidad urbana",
+   "Guardia de movilidad"
+  ],
+  "area": "Seguridad",
+  "ambito": "Local",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "auxiliar-de-biblioteca-local",
+  "nombre": "Auxiliar de Biblioteca (Local)",
+  "aliases": [
+   "Auxiliar de biblioteca",
+   "Biblioteca municipal"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "arquitecto-a-municipal",
+  "nombre": "Arquitecto/a municipal",
+  "aliases": [
+   "Arquitecto del ayuntamiento",
+   "Técnico de administración especial arquitecto"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "arquitecto-a-tecnico-municipal",
+  "nombre": "Arquitecto/a técnico municipal",
+  "aliases": [
+   "Aparejador municipal",
+   "Arquitecto técnico del ayuntamiento"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "ingeniero-a-tecnico-municipal",
+  "nombre": "Ingeniero/a técnico municipal",
+  "aliases": [
+   "Ingeniero técnico del ayuntamiento",
+   "Ingeniero técnico de obras públicas local"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "operario-de-servicios-multiples-local",
+  "nombre": "Operario de servicios múltiples (Local)",
+  "aliases": [
+   "Operario",
+   "Peón municipal",
+   "Servicios múltiples"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "AP",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "oficial-de-oficios-local",
+  "nombre": "Oficial de oficios (Local)",
+  "aliases": [
+   "Oficial de primera",
+   "Oficial de oficios municipal"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "conserje-de-colegio-publico-local",
+  "nombre": "Conserje de colegio público (Local)",
+  "aliases": [
+   "Conserje",
+   "Conserje de colegio"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "AP",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "monitor-tecnico-deportivo-local",
+  "nombre": "Monitor/Técnico deportivo (Local)",
+  "aliases": [
+   "Monitor deportivo",
+   "Técnico de deportes"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "agente-de-desarrollo-local",
+  "nombre": "Agente de Desarrollo Local",
+  "aliases": [
+   "ADL",
+   "Agente de empleo y desarrollo local"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-de-medio-ambiente-local",
+  "nombre": "Técnico de Medio Ambiente (Local)",
+  "aliases": [
+   "Técnico ambiental municipal"
+  ],
+  "area": "Administración Local",
+  "ambito": "Local",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lbrl",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lcsp",
+   "lopdgdd"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "arquitecto-a-de-comunidad-autonoma",
+  "nombre": "Arquitecto/a de Comunidad Autónoma",
+  "aliases": [
+   "Arquitecto de la Junta",
+   "Arquitecto autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "ingeniero-a-de-caminos-de-comunidad-autonoma",
+  "nombre": "Ingeniero/a de Caminos de Comunidad Autónoma",
+  "aliases": [
+   "Ingeniero de caminos autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "ingeniero-a-tecnico-de-obras-publicas-de-comunidad-autonoma",
+  "nombre": "Ingeniero/a Técnico de Obras Públicas de Comunidad Autónoma",
+  "aliases": [
+   "ITOP autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "letrado-tecnico-superior-juridico-de-comunidad-autonoma",
+  "nombre": "Letrado/Técnico Superior Jurídico de Comunidad Autónoma",
+  "aliases": [
+   "Letrado autonómico",
+   "Técnico jurídico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-superior-de-hacienda-de-comunidad-autonoma",
+  "nombre": "Técnico Superior de Hacienda de Comunidad Autónoma",
+  "aliases": [
+   "Técnico de hacienda autonómica",
+   "Inspector tributario autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013",
+   "lgt",
+   "lgp"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-superior-de-informatica-de-comunidad-autonoma",
+  "nombre": "Técnico Superior de Informática de Comunidad Autónoma",
+  "aliases": [
+   "Informático autonómico",
+   "TIC autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-de-gestion-de-sistemas-e-informatica-de-comunidad-autonoma",
+  "nombre": "Técnico de Gestión de Sistemas e Informática de Comunidad Autónoma",
+  "aliases": [
+   "Gestión informática autonómica"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "tecnico-superior-de-medio-ambiente-de-comunidad-autonoma",
+  "nombre": "Técnico Superior de Medio Ambiente de Comunidad Autónoma",
+  "aliases": [
+   "Técnico medioambiental autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "subalterno-ordenanza-de-comunidad-autonoma",
+  "nombre": "Subalterno/Ordenanza de Comunidad Autónoma",
+  "aliases": [
+   "Ordenanza autonómico",
+   "Subalterno autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "AP",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "auxiliar-de-archivos-y-bibliotecas-de-comunidad-autonoma",
+  "nombre": "Auxiliar de Archivos y Bibliotecas de Comunidad Autónoma",
+  "aliases": [
+   "Auxiliar de biblioteca autonómico"
+  ],
+  "area": "Administración Autonómica",
+  "ambito": "Autonómica",
+  "grupo": "C2",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "policia-autonomica-de-canarias",
+  "nombre": "Policía Autonómica de Canarias",
+  "aliases": [
+   "Policía Canaria"
+  ],
+  "area": "Seguridad",
+  "ambito": "Autonómica",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "policia-nacional-escala-superior",
+  "nombre": "Policía Nacional - Escala Superior",
+  "aliases": [
+   "Comisario",
+   "Policía Nacional A1"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Policía Nacional"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Pruebas de selección de la Escala Básica",
+    "url": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/empleo-publico/oposiciones/policia-nacional/escala-basica/pruebas-de-seleccion/",
+    "tipo": "Información oficial",
+    "fuente": "Ministerio del Interior",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Policía Nacional (Escala Básica)",
+    "url": "https://blog.opositatest.com/temario-oposicion-policia-nacional-escala-basica/",
+    "tipo": "Temario",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de la oposición de Policía Nacional",
+    "url": "https://preparaoposiciones.com/blog/oposiciones/policia-nacional/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "policia-nacional-escala-de-subinspeccion",
+  "nombre": "Policía Nacional - Escala de Subinspección",
+  "aliases": [
+   "Subinspector",
+   "Promoción interna Policía Nacional"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Policía Nacional"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": [
+   {
+    "titulo": "Pruebas de selección de la Escala Básica",
+    "url": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/empleo-publico/oposiciones/policia-nacional/escala-basica/pruebas-de-seleccion/",
+    "tipo": "Información oficial",
+    "fuente": "Ministerio del Interior",
+    "gratuito": true
+   },
+   {
+    "titulo": "Temario de Policía Nacional (Escala Básica)",
+    "url": "https://blog.opositatest.com/temario-oposicion-policia-nacional-escala-basica/",
+    "tipo": "Temario",
+    "fuente": "OpositaTest",
+    "gratuito": true
+   },
+   {
+    "titulo": "Guía de la oposición de Policía Nacional",
+    "url": "https://preparaoposiciones.com/blog/oposiciones/policia-nacional/",
+    "tipo": "Guía",
+    "fuente": "Preparaoposiciones",
+    "gratuito": true
+   }
+  ]
+ },
+ {
+  "id": "cuerpo-de-tecnicos-de-auditoria-y-contabilidad",
+  "nombre": "Cuerpo de Técnicos de Auditoría y Contabilidad",
+  "aliases": [
+   "TAC",
+   "Auditor técnico"
+  ],
+  "area": "Hacienda",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Auditoría y Contabilidad"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lgp",
+   "lgt",
+   "lcsp"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "agente-del-servicio-de-vigilancia-aduanera",
+  "nombre": "Agente del Servicio de Vigilancia Aduanera",
+  "aliases": [
+   "Vigilancia aduanera",
+   "SVA",
+   "Agente de aduanas"
+  ],
+  "area": "Hacienda",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Vigilancia Aduanera"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lgp",
+   "lgt",
+   "lcsp"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-subinspectores-laborales",
+  "nombre": "Cuerpo de Subinspectores Laborales",
+  "aliases": [
+   "Subinspector de empleo y seguridad social"
+  ],
+  "area": "Seguridad Social",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Subinspectores"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-ayudantes-de-archivos-bibliotecas-y-museos",
+  "nombre": "Cuerpo de Ayudantes de Archivos, Bibliotecas y Museos",
+  "aliases": [
+   "Ayudante de archivos",
+   "Ayudante de bibliotecas",
+   "Ayudante de museos"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Ayudantes de Archivos"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-ingenieros-tecnicos-de-obras-publicas-del-estado",
+  "nombre": "Cuerpo de Ingenieros Técnicos de Obras Públicas del Estado",
+  "aliases": [
+   "ITOP del Estado"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Ingenieros Técnicos"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-observadores-de-meteorologia-del-estado",
+  "nombre": "Cuerpo de Observadores de Meteorología del Estado",
+  "aliases": [
+   "Observador de meteorología",
+   "AEMET observador"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [
+   "Observadores de Meteorología"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-diplomados-en-meteorologia-del-estado",
+  "nombre": "Cuerpo de Diplomados en Meteorología del Estado",
+  "aliases": [
+   "Diplomado en meteorología",
+   "AEMET diplomado"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A2",
+  "boe": [
+   "Diplomados en Meteorología"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "escala-de-meteorologos-del-estado",
+  "nombre": "Escala de Meteorólogos del Estado",
+  "aliases": [
+   "Meteorólogo",
+   "AEMET"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Meteorólogos"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-superior-de-tecnicos-de-instituciones-penitenciarias",
+  "nombre": "Cuerpo Superior de Técnicos de Instituciones Penitenciarias",
+  "aliases": [
+   "Técnico de prisiones",
+   "Psicólogo de prisiones",
+   "Jurista de prisiones"
+  ],
+  "area": "Seguridad",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Instituciones Penitenciarias"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-2-1986",
+   "lo-4-2015",
+   "codigo-penal",
+   "lecrim",
+   "lo-3-2007",
+   "lo-1-2004"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-letrados-de-las-cortes-generales",
+  "nombre": "Cuerpo de Letrados de las Cortes Generales",
+  "aliases": [
+   "Letrado de las Cortes",
+   "Letrado Congreso"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-tecnicos-administrativos-de-las-cortes-generales",
+  "nombre": "Cuerpo de Técnicos-Administrativos de las Cortes Generales",
+  "aliases": [
+   "Administrativo de las Cortes"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "personal-laboral-de-la-administracion-general-del-estado",
+  "nombre": "Personal laboral de la Administración General del Estado",
+  "aliases": [
+   "Laboral AGE",
+   "Convenio Único AGE"
+  ],
+  "area": "Administración General del Estado",
+  "ambito": "Estado",
+  "grupo": "",
+  "boe": [
+   "personal laboral"
+  ],
+  "normas": [
+   "constitucion",
+   "ley-39-2015",
+   "ley-40-2015",
+   "trebep",
+   "lo-3-2007",
+   "lo-1-2004",
+   "lopdgdd",
+   "ley-19-2013"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-facultativos-del-instituto-nacional-de-toxicologia",
+  "nombre": "Cuerpo de Facultativos del Instituto Nacional de Toxicología",
+  "aliases": [
+   "Facultativo de toxicología",
+   "Instituto de Toxicología"
+  ],
+  "area": "Justicia",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Toxicología"
+  ],
+  "normas": [
+   "constitucion",
+   "lopj"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "militar-de-carrera-cuerpo-general-de-las-armas-oficiales",
+  "nombre": "Militar de Carrera: Cuerpo General de las Armas (Oficiales)",
+  "aliases": [
+   "Oficial del Ejército",
+   "Academia General Militar",
+   "Oficial de la Armada"
+  ],
+  "area": "Defensa",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lo-3-2007",
+   "lo-1-2004",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "militar-suboficiales",
+  "nombre": "Militar: Suboficiales",
+  "aliases": [
+   "Suboficial",
+   "Sargento"
+  ],
+  "area": "Defensa",
+  "ambito": "Estado",
+  "grupo": "C1",
+  "boe": [],
+  "normas": [
+   "constitucion",
+   "lo-3-2007",
+   "lo-1-2004",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-juridico-militar",
+  "nombre": "Cuerpo Jurídico Militar",
+  "aliases": [
+   "Jurídico militar",
+   "Fiscal militar"
+  ],
+  "area": "Defensa",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Jurídico Militar"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-3-2007",
+   "lo-1-2004",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-de-intervencion-militar",
+  "nombre": "Cuerpo de Intervención Militar",
+  "aliases": [
+   "Interventor militar"
+  ],
+  "area": "Defensa",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Intervención Militar"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-3-2007",
+   "lo-1-2004",
+   "trebep"
+  ],
+  "enlaces": [
+   {
+    "titulo": "BOE",
+    "url": "https://www.boe.es"
+   },
+   {
+    "titulo": "Punto de Acceso General (empleo público)",
+    "url": "https://administracion.gob.es"
+   }
+  ],
+  "recursos": []
+ },
+ {
+  "id": "cuerpo-militar-de-sanidad",
+  "nombre": "Cuerpo Militar de Sanidad",
+  "aliases": [
+   "Médico militar",
+   "Sanidad militar"
+  ],
+  "area": "Defensa",
+  "ambito": "Estado",
+  "grupo": "A1",
+  "boe": [
+   "Sanidad"
+  ],
+  "normas": [
+   "constitucion",
+   "lo-3-2007",
+   "lo-1-2004",
    "trebep"
   ],
   "enlaces": [

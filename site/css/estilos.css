@@ -211,3 +211,20 @@ details[open] > summary::before { transform: rotate(45deg); }
 @media (prefers-reduced-motion: no-preference) {
   .chip, .boton, .area, .troncales a { transition: background-color 0.15s, filter 0.15s, color 0.15s; }
 }
+
+/* Plan de estudio */
+.campo.corto { max-width: 16rem; }
+.cuenta-atras { font: 800 1.6rem/1.2 var(--titulos); margin: 1.25rem 0 0.75rem; }
+.plan { display: grid; gap: 0.4rem; }
+.plan li { display: grid; padding: 0.7rem 1rem; background: var(--superficie); border-radius: 0.5rem; border-left: 0.4rem solid var(--c, var(--amarillo)); }
+.plan li.repaso { border-left-color: var(--corrector); }
+.evento.plazo time { background: var(--s5); }
+.evento.plazo .tipo { color: var(--tinta); }
+
+/* Herramientas y sugerencias */
+.fila-campos { display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
+.fila-campos .campo { flex: 0 1 14rem; }
+.resultado { margin-top: 1.25rem; padding: 0.9rem 1.1rem; background: var(--superficie); border-left: 0.4rem solid var(--amarillo); border-radius: 0.4rem; font-weight: 600; }
+h2.primero { margin-top: 0; }
+.campo textarea { width: 100%; font: 400 1.05rem/1.5 var(--texto); color: #111827; background: #fff; border: 1px solid var(--linea); border-radius: 0.6rem; padding: 0.8rem 1rem; resize: vertical; }
+.boton[aria-disabled="true"] { opacity: 0.5; pointer-events: none; }
