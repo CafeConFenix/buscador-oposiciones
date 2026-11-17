@@ -14,11 +14,14 @@ from dataclasses import asdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from .boe_client import BoeClient, ErrorBoe
+from .boe_client import BoeClient, ErrorBoe, abrir_http
 from .convocatorias import extraer_convocatorias
 from .fechas import fecha_de_examen
 from .ical import generar_ics
 from .temarios import comprobar_enlaces, extraer_temas
+from .autonomicas import actualizar_autonomicas
+from .plazos import extraer_plazo, extraer_tasa, fin_de_plazo
+from .publicacion import generar_rss, generar_sitemap, pagina_oposicion
 from .normas import comprobar_titulo, construir_norma, necesita_actualizar
 
 DATOS = Path(__file__).resolve().parents[2] / "site" / "data"
@@ -34,13 +37,38 @@ def actualizar_convocatorias(
         for conv in extraer_convocatorias(cliente.sumario(dia.isoformat())):
             if conv.id in por_id and "fecha_examen" in por_id[conv.id]:
                 por_id[conv.id].update(titulo=conv.titulo)  # el BOE es la fuente de verdad
+                if conv.tipo == "convocatoria" and "plazo_leido" not in por_id[conv.id]:
+                    por_id[conv.id].update(_leer_plazos(cliente, conv))
                 continue
             registro = asdict(conv)
             registro["fecha_examen"] = _buscar_fecha_examen(cliente, conv) if conv.tipo == "admitidos" else None
+            if conv.tipo == "convocatoria":
+                registro.update(_leer_plazos(cliente, conv))
             por_id[conv.id] = registro
     limite = (hoy - timedelta(days=conservar_dias)).isoformat()
     vigentes = [c for c in por_id.values() if c["fecha"] >= limite]
     return sorted(vigentes, key=lambda c: (c["fecha"], c["id"]), reverse=True)
+
+
+def _leer_plazos(cliente: BoeClient, conv) -> dict:
+    """Plazo de solicitudes y tasa de una convocatoria. {} si el anuncio no se pudo leer (se reintenta otro día)."""
+    if not conv.url_xml:
+        return {"plazo_leido": True}
+    try:
+        texto = cliente.texto_xml(conv.url_xml)
+    except Exception as error:  # noqa: BLE001
+        print(f"  aviso: no se pudo leer el plazo de {conv.id}: {error}", file=sys.stderr)
+        return {}
+    datos: dict = {"plazo_leido": True}
+    plazo = extraer_plazo(texto)
+    if plazo:
+        cantidad, unidad = plazo
+        datos["plazo"] = "1 mes" if unidad == "mes" else f"{cantidad} días {unidad}"
+        datos["fin_plazo"] = fin_de_plazo(conv.fecha, cantidad, unidad)
+    tasa = extraer_tasa(texto)
+    if tasa is not None:
+        datos["tasa"] = tasa
+    return datos
 
 
 def _buscar_fecha_examen(cliente: BoeClient, conv) -> str | None:
@@ -53,7 +81,7 @@ def _buscar_fecha_examen(cliente: BoeClient, conv) -> str | None:
         return None
 
 
-def actualizar_normas(cliente: BoeClient, indice_normas: list[dict], carpeta: Path) -> dict:
+def actualizar_normas(cliente: BoeClient, indice_normas: list[dict], carpeta: Path, cambios: list | None = None) -> dict:
     """Descarga las normas que han cambiado. Un fallo en una no impide actualizar las demás."""
     carpeta.mkdir(parents=True, exist_ok=True)
     resumen = {"actualizadas": 0, "sin_cambios": 0, "con_error": 0}
@@ -75,6 +103,8 @@ def actualizar_normas(cliente: BoeClient, indice_normas: list[dict], carpeta: Pa
             resumen["con_error"] += 1
             continue
         destino.write_text(json.dumps(norma, ensure_ascii=False, separators=(",", ":")), "utf-8")
+        if cambios is not None and actual is not None:  # ya la teníamos: es una modificación, no la primera descarga
+            cambios.append({"norma": entrada["nombre"], "id": entrada["id"], "fecha": norma["huella"], "anterior": actual.get("huella", "")})
         print(f"+ {entrada['nombre']}: {len(norma['articulos'])} bloques")
         resumen["actualizadas"] += 1
     return resumen
@@ -149,6 +179,14 @@ def _escribir_salidas(convocatorias: list[dict], hoy: date) -> None:
     (DATOS / "estado.json").write_text(json.dumps({"actualizado": ahora}), "utf-8")
 
 
+def _url_base() -> str:
+    import os
+
+    repo = os.environ.get("GITHUB_REPOSITORY", "CafeConFenix/buscador-oposiciones")
+    propietario, nombre = repo.split("/", 1)
+    return f"https://{propietario.lower()}.github.io/{nombre}/"
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="orden", required=True)
@@ -156,6 +194,8 @@ def main(argv: list[str] | None = None) -> int:
     conv.add_argument("--dias", type=int, default=7)
     sub.add_parser("normas")
     sub.add_parser("temarios")
+    sub.add_parser("publicar")
+    sub.add_parser("autonomicas")
     sub.add_parser("enlaces")
     args = parser.parse_args(argv)
 
@@ -174,13 +214,35 @@ def main(argv: list[str] | None = None) -> int:
         convocatorias = json.loads((DATOS / "convocatorias.json").read_text("utf-8"))
         n = actualizar_temarios(cliente, oposiciones, convocatorias, DATOS / "temarios")
         print(f"Temarios: {n} oposiciones con programa oficial")
+    elif args.orden == "autonomicas":
+        comunidades = json.loads((DATOS / "recursos.json").read_text("utf-8"))["comunidades"]
+        resumen = actualizar_autonomicas(abrir_http, comunidades, DATOS / "convocatorias_ccaa.json", date.today())
+        print(f"Autonómicas: {resumen['comunidades_con_fuente']} comunidades con feed, {resumen['sin_fuente']} sin feed, "
+              f"{resumen['anuncios']} anuncios, {resumen['con_error']} con error")
+    elif args.orden == "publicar":
+        base = _url_base()
+        oposiciones = json.loads((DATOS / "oposiciones.json").read_text("utf-8"))
+        convocatorias = json.loads((DATOS / "convocatorias.json").read_text("utf-8"))
+        sitio = DATOS.parent
+        (DATOS / "convocatorias.xml").write_text(generar_rss(convocatorias, base, datetime.now(timezone.utc)), "utf-8")
+        for o in oposiciones:
+            carpeta = sitio / "oposicion" / o["id"]
+            carpeta.mkdir(parents=True, exist_ok=True)
+            (carpeta / "index.html").write_text(pagina_oposicion(o, base), "utf-8")
+        (sitio / "sitemap.xml").write_text(generar_sitemap(oposiciones, base), "utf-8")
+        (sitio / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n", "utf-8")
+        print(f"Publicación: {len(oposiciones)} páginas, mapa del sitio y avisos RSS")
     elif args.orden == "enlaces":
         estado = comprobar_enlaces(_todas_las_urls(), _sonda_http)
         (DATOS / "enlaces_estado.json").write_text(json.dumps(estado, indent=0, sort_keys=True), "utf-8")
         print(f"Enlaces: {sum(estado.values())} correctos, {len(estado) - sum(estado.values())} caídos")
     else:
         indice = json.loads((DATOS / "normas.json").read_text("utf-8"))
-        resumen = actualizar_normas(cliente, indice, DATOS / "normas")
+        archivo_cambios = DATOS / "cambios.json"
+        previos = json.loads(archivo_cambios.read_text("utf-8")) if archivo_cambios.exists() else []
+        nuevos: list = []
+        resumen = actualizar_normas(cliente, indice, DATOS / "normas", cambios=nuevos)
+        archivo_cambios.write_text(json.dumps((nuevos + previos)[:100], ensure_ascii=False, indent=1), "utf-8")
         print(f"Normas: {resumen['actualizadas']} actualizadas, {resumen['sin_cambios']} sin cambios, {resumen['con_error']} con error")
     return 0
 
