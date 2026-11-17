@@ -31,6 +31,10 @@ jobs:
       - name: Descargar normas (solo las que han cambiado)
         run: python -m oposiciones.actualizar normas
         working-directory: scripts
+      - name: Leer las convocatorias de las comunidades autónomas
+        run: python -m oposiciones.actualizar autonomicas
+        working-directory: scripts
+        continue-on-error: true
       - name: Extraer el temario oficial de las convocatorias
         run: python -m oposiciones.actualizar temarios
         working-directory: scripts
@@ -38,11 +42,14 @@ jobs:
         run: python -m oposiciones.actualizar enlaces
         working-directory: scripts
         continue-on-error: true
+      - name: Generar páginas, avisos y mapa del sitio
+        run: python -m oposiciones.actualizar publicar
+        working-directory: scripts
       - name: Guardar cambios
         run: |
           git config user.name "robot-oposiciones"
           git config user.email "actions@users.noreply.github.com"
-          git add site/data
+          git add site/data site/oposicion site/sitemap.xml site/robots.txt
           git diff --cached --quiet || git commit -m "Actualizar datos del BOE"
           git push
       - name: Volver a publicar la web
