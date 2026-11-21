@@ -6,7 +6,7 @@ X-WR-CALNAME:Exámenes de oposiciones
 X-WR-TIMEZONE:Europe/Madrid
 BEGIN:VEVENT
 UID:BOE-A-2026-11410@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20260620
 SUMMARY:Examen: Orden PJC/515/2026\, de 14 de mayo\, por la que se aprueba 
  la relación definitiva de personas admitidas y excluidas\, y se fijan las
@@ -19,7 +19,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-11409@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20260620
 SUMMARY:Examen: Orden PJC/514/2026\, de 14 de mayo\, por la que se aprueba 
  la relación definitiva de personas admitidas y excluidas\, y se fijan las
@@ -32,7 +32,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-11792@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20260705
 SUMMARY:Examen: Orden PJC/543/2026\, de 22 de mayo\, por la que se aprueba 
  la relación definitiva de personas admitidas y excluidas\, y se anuncia f
@@ -47,7 +47,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-12733@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20260714
 SUMMARY:Examen: Resolución de 4 de junio de 2026\, de la Subsecretaría\, 
  por la que se aprueba la relación provisional de personas admitidas y exc
@@ -61,7 +61,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-14250@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20260905
 SUMMARY:Examen: Orden PJC/660/2026\, de 25 de junio\, por la que se aprueba
   la relación definitiva de personas admitidas y excluidas en el proceso s
@@ -74,7 +74,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-18721@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261003
 SUMMARY:Examen: Orden PJC/937/2026\, de 28 de agosto\, por la que se aprueb
  a la relación definitiva de personas admitidas y excluidas y se publican 
@@ -89,7 +89,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-18784@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261016
 SUMMARY:Examen: Resolución de 3 de septiembre de 2026\, de la Subsecretar
  ía\, por la que se aprueba la relación provisional de personas admitidas
@@ -105,7 +105,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-16387@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261024
 SUMMARY:Examen: Resolución de 13 de julio de 2026\, de la Subsecretaría\,
   por la que se aprueba la relación provisional de personas admitidas y ex
@@ -118,7 +118,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-21966@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261025
 SUMMARY:Examen: Resolución de 15 de octubre de 2026\, de la Subsecretaría
  \, por la que se aprueba la relación definitiva de personas admitidas y e
@@ -131,7 +131,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-20316@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261025
 SUMMARY:Examen: Acuerdo de 24 de septiembre de 2026\, de la Comisión de Se
  lección prevista en el artículo 305 de la Ley Orgánica 6/1985\, de 1 de
@@ -147,7 +147,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-17631@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261025
 SUMMARY:Examen: Resolución de 5 de agosto de 2026\, de la Subsecretaría\,
   por la que se aprueba la relación provisional de personas admitidas y ex
@@ -161,7 +161,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-16381@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261025
 SUMMARY:Examen: Acuerdo de 21 de julio de 2026\, de la Comisión de Selecci
  ón prevista en el artículo 305 de la Ley Orgánica 6/1985\, de 1 de juli
@@ -177,7 +177,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-21562@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261121
 SUMMARY:Examen: Resolución de 12 de octubre de 2026\, de la Secretaría de
   Estado de Función Pública\, por la que se aprueba la relación definiti
@@ -194,7 +194,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-21478@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261122
 SUMMARY:Examen: Resolución de 8 de octubre de 2026\, de la Subsecretaría\
  , por la que se aprueba la relación provisional de personas admitidas y e
@@ -208,7 +208,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-23351@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20261128
 SUMMARY:Examen: Resolución de 30 de octubre de 2026\, de la Presidencia de
   la Agencia Estatal de Administración Tributaria\, por la que se aprueba 
@@ -224,7 +224,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-20548@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20270117
 SUMMARY:Examen: Resolución de 30 de septiembre de 2026\, de la Subsecretar
  ía\, por la que se aprueba la relación provisional de personas admitidas
@@ -241,7 +241,7 @@ DESCRIPTION:Anuncio oficial: https://www.boe.es/diario_boe/txt.php?id=BOE-A
 END:VEVENT
 BEGIN:VEVENT
 UID:BOE-A-2026-20031@oposiciones-es
-DTSTAMP:20261120T000000Z
+DTSTAMP:20261121T000000Z
 DTSTART;VALUE=DATE:20270206
 SUMMARY:Examen: Resolución de 22 de septiembre de 2026\, de la Subsecretar
  ía\, por la que se aprueba la relación provisional de personas admitidas
