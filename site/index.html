@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ffffff">
   <title>Oposiciones de España: temarios, normas y calendario</title>
   <meta name="description" content="Escribe la oposición que preparas y encuentra enlaces oficiales, normas del BOE, libros, apuntes y las fechas de convocatorias y exámenes.">
@@ -11,8 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <script>try{var t=localStorage.getItem("tema");if(t==="claro"||t==="oscuro")document.documentElement.dataset.tema=t}catch(e){}</script>
   <link rel="stylesheet" href="css/estilos.css">
   <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/tema.js"></script>
 </head>
 <body>
   <a class="saltar" href="#principal">Saltar al contenido</a>
@@ -26,6 +28,7 @@
       <a href="#/comunidades" data-ruta="/comunidades">Comunidades</a>
       <a href="#/herramientas" data-ruta="/herramientas">Herramientas</a>
       <a href="#/ayuda" data-ruta="/ayuda" id="enlace-ayuda" hidden>Sugerencias</a>
+      <button type="button" class="tema" id="boton-tema"></button>
     </nav>
    </div>
   </header>
