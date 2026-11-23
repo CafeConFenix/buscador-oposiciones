@@ -167,3 +167,19 @@ export function convocatoriasDeComunidad(id, convocatorias) {
     .filter((c) => comunidadDe(c) === id)
     .sort((a, b) => (a.fecha < b.fecha ? 1 : a.fecha > b.fecha ? -1 : 0));
 }
+
+/** Deshace el 'ResoluciÃ³n' típico de UTF-8 leído como Latin-1; el texto correcto no se toca. */
+export function repararTexto(texto = "") {
+  if (!/[ÃÂ]/.test(texto)) return texto;
+  try {
+    const bytes = Uint8Array.from([...texto].map((c) => {
+      const mapa = { "€": 0x80, "‚": 0x82, "ƒ": 0x83, "„": 0x84, "…": 0x85, "†": 0x86, "‡": 0x87, "ˆ": 0x88, "‰": 0x89, "Š": 0x8a, "‹": 0x8b, "Œ": 0x8c, "Ž": 0x8e, "‘": 0x91, "’": 0x92, "“": 0x93, "”": 0x94, "•": 0x95, "–": 0x96, "—": 0x97, "˜": 0x98, "™": 0x99, "š": 0x9a, "›": 0x9b, "œ": 0x9c, "ž": 0x9e, "Ÿ": 0x9f };
+      const codigo = mapa[c] ?? c.charCodeAt(0);
+      if (codigo > 255) throw new Error("no es Latin-1");
+      return codigo;
+    }));
+    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch {
+    return texto;
+  }
+}

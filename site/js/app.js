@@ -1,7 +1,7 @@
-import { buscarOposiciones, buscarArticulos, dividirResaltado, convocatoriasDe, esConsultaDeArticulo, urlPdfBoe, enlacesApuntes, convocatoriasDeComunidad } from "./busqueda.js";
+import { buscarOposiciones, buscarArticulos, dividirResaltado, convocatoriasDe, esConsultaDeArticulo, urlPdfBoe, enlacesApuntes, convocatoriasDeComunidad, repararTexto } from "./busqueda.js";
 import { planificarEstudio, diasHasta } from "./plan.js";
 import { notaTest, costeOposicion } from "./calculadoras.js";
-import { construirMailto } from "./ayuda.js";
+import { construirMailto, contactoValido } from "./ayuda.js";
 import { construirEventos, agruparPorMes, filtrarEventos, formatearFecha, formatearDia } from "./calendario.js";
 
 const principal = document.getElementById("principal");
@@ -88,7 +88,7 @@ async function cargarDatos() {
     cargarJson("data/convocatorias_ccaa.json", []),
     cargarJson("data/config.json", { contacto: "" }),
   ]);
-  const convocatorias = [...convocatoriasBoe, ...autonomicas];
+  const convocatorias = [...convocatoriasBoe, ...autonomicas.map((a) => ({ ...a, titulo: repararTexto(a.titulo) }))];
   return { oposiciones, normas, convocatorias, examenes, estado, recursos, enlacesEstado, cambios, config };
 }
 
@@ -358,6 +358,10 @@ function vistaOposicion(d, params, id) {
         ...d.recursos.estado.filter((e) => o.ambito === "Estado" && !["Seguridad", "Defensa"].includes(o.area) && enlaceVivo(d, e.url))
           .map((e) => h("li", {}, h("a", { href: e.url, ...ENLACE_EXT }, e.nombre), h("span", { class: "nota" }, ` · ${e.descripcion}`))),
       ]),
+      ...((o.examenes ?? []).filter((x) => enlaceVivo(d, x.url)).length
+        ? [h("h3", {}, "Exámenes anteriores (publicados por el organismo)"),
+           h("ul", { class: "enlaces" }, o.examenes.filter((x) => enlaceVivo(d, x.url)).map((x) => h("li", {}, h("a", { href: x.url, ...ENLACE_EXT }, x.titulo))))]
+        : []),
       h("h3", {}, "Libros, apuntes y tests"),
       h("ul", { class: "enlaces" }, [
         ...propios.map((r) => h("li", {}, h("a", { href: r.url, ...ENLACE_EXT }, r.titulo), h("span", { class: "nota" }, ` · ${[r.fuente, r.tipo].filter(Boolean).join(", ")}${r.gratuito ? " (gratis)" : ""}`))),
@@ -702,7 +706,7 @@ async function iniciar() {
     document.getElementById("pie-datos").textContent =
       `Datos del BOE actualizados el ${formatearFecha(datos.estado.actualizado.slice(0, 10))}. Fuente: Agencia Estatal Boletín Oficial del Estado.`;
   }
-  if (datos.config?.contacto) document.getElementById("enlace-ayuda").hidden = false;
+  if (contactoValido(datos.config?.contacto)) document.getElementById("enlace-ayuda").hidden = false;
   await pintarRuta();
   window.addEventListener("hashchange", () => { pintarRuta(); window.scrollTo(0, 0); });
 }

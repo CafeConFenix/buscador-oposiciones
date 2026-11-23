@@ -53,6 +53,13 @@
     "fuente": "Preparaoposiciones",
     "gratuito": true
    }
+  ],
+  "examenes": [
+   {
+    "titulo": "Exámenes anteriores del Cuerpo General Auxiliar (cuestionarios y plantillas, 2009-2018)",
+    "url": "https://www.inap.es/es/seleccion/procesos-selectivos-de-cuerposescalas-generales/cuerpo-general-auxiliar-de-la-administracion-del-estado",
+    "fuente": "Organismo convocante"
+   }
   ]
  },
  {
@@ -93,7 +100,14 @@
     "url": "https://www.inap.es"
    }
   ],
-  "recursos": []
+  "recursos": [],
+  "examenes": [
+   {
+    "titulo": "Exámenes anteriores del Cuerpo General Administrativo (2008-2019)",
+    "url": "https://www.inap.es/es/seleccion/procesos-selectivos-de-cuerposescalas-generales/cuerpo-general-administrativo-de-la-administracion-del-estado",
+    "fuente": "Organismo convocante"
+   }
+  ]
  },
  {
   "id": "cuerpo-de-gestion-de-la-administracion-civil-del-estado",
@@ -134,7 +148,14 @@
     "url": "https://www.inap.es"
    }
   ],
-  "recursos": []
+  "recursos": [],
+  "examenes": [
+   {
+    "titulo": "Exámenes anteriores del Cuerpo de Gestión (2008-2013)",
+    "url": "https://www.inap.es/es/seleccion/procesos-selectivos-de-cuerposescalas-generales/cuerpo-de-gestion-de-la-administracion-civil-del-estado",
+    "fuente": "Organismo convocante"
+   }
+  ]
  },
  {
   "id": "cuerpo-superior-de-administradores-civiles-del-estado",
@@ -214,7 +235,14 @@
     "url": "https://www.inap.es"
    }
   ],
-  "recursos": []
+  "recursos": [],
+  "examenes": [
+   {
+    "titulo": "Página oficial del proceso selectivo (INAP)",
+    "url": "https://www.inap.es/es/seleccion/procesos-selectivos-de-cuerposescalas-generales/cuerpo-de-tecnicos-auxiliares-de-informatica-de-la-administracion-del-estado",
+    "fuente": "Organismo convocante"
+   }
+  ]
  },
  {
   "id": "cuerpo-de-gestion-de-sistemas-e-informatica-de-la-administracion-del-e",
@@ -727,6 +755,18 @@
     "fuente": "Adams",
     "gratuito": true
    }
+  ],
+  "examenes": [
+   {
+    "titulo": "Plantilla definitiva del examen de Auxilio Judicial, 3 de octubre de 2026",
+    "url": "https://www.mjusticia.gob.es/es/Ciudadano/EmpleoPublico/Documents/Acuerdo%20del%20TCU%20Auxilio%20Judicial-%20plantilla%20definitiva-%20examen%203%20de%20octubre%20de%202026.pdf",
+    "fuente": "Organismo convocante"
+   },
+   {
+    "titulo": "Plantilla definitiva del examen de Auxilio Judicial, 27 de septiembre de 2025",
+    "url": "https://www.mjusticia.gob.es/es/Ciudadano/EmpleoPublico/Documents/Acuerdo%20del%20TCU%20Auxilio%20Judicial-%20plantilla%20definitiva-%20examen%2027%20de%20septiembre%20de%202025%20-.pdf",
+    "fuente": "Organismo convocante"
+   }
   ]
  },
  {
@@ -778,6 +818,13 @@
     "tipo": "Guía",
     "fuente": "Adams",
     "gratuito": true
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Primer ejercicio (test) de Tramitación Procesal, turno libre, 2024",
+    "url": "https://www.mjusticia.gob.es/es/Ciudadano/EmpleoPublico/Documents/EJERCICIO%201%20INCIDENCIAS%20TEST%2064%20para%20examen.pdf",
+    "fuente": "Organismo convocante"
    }
   ]
  },
@@ -837,6 +884,13 @@
     "tipo": "Temario",
     "fuente": "Preparaoposiciones",
     "gratuito": true
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Información oficial del proceso de Gestión Procesal y Administrativa",
+    "url": "https://www.mjusticia.gob.es/es/ciudadania/empleo-publico/acceso-convocatorias-perfiles/gestion-procesal",
+    "fuente": "Organismo convocante"
    }
   ]
  },
@@ -1072,6 +1126,13 @@
     "fuente": "Preparaoposiciones",
     "gratuito": true
    }
+  ],
+  "examenes": [
+   {
+    "titulo": "Portal del Aspirante de la Policía Nacional (pruebas y plantillas de cada convocatoria)",
+    "url": "https://www.policia.es/portalaspirantes/web/escala-basica-ejecutiva",
+    "fuente": "Organismo convocante"
+   }
   ]
  },
  {
@@ -1185,6 +1246,18 @@
     "tipo": "Guía",
     "fuente": "Redopositor",
     "gratuito": true
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Cuestionario de examen de ingreso 2026 (modelo A)",
+    "url": "https://web.guardiacivil.es/export/sites/guardiaCivil/documentos/pdfs/2026/Procesos_Selectivos_2026/INGRESO-GC-2026-TIPO-A.pdf",
+    "fuente": "Organismo convocante"
+   },
+   {
+    "titulo": "Cuestionario de examen de ingreso 2022 (modelo 1A)",
+    "url": "https://web.guardiacivil.es/export/sites/guardiaCivil/documentos/pdfs/2022/IngresoGC2022/INGRESO_GC_2022_1A.PDF",
+    "fuente": "Organismo convocante"
    }
   ]
  },
@@ -2618,7 +2691,9 @@
   "area": "Educación",
   "ambito": "Autonómica",
   "grupo": "A1",
-  "boe": [],
+  "boe": [
+   "Profesores de Música y Artes Escénicas"
+  ],
   "normas": [
    "constitucion",
    "loe",
@@ -4158,7 +4233,9 @@
   "area": "Educación",
   "ambito": "Autonómica",
   "grupo": "A1",
-  "boe": [],
+  "boe": [
+   "Profesores de Artes Plásticas y Diseño"
+  ],
   "normas": [
    "constitucion",
    "loe",
@@ -4249,7 +4326,9 @@
   "area": "Educación",
   "ambito": "Autonómica",
   "grupo": "A1",
-  "boe": [],
+  "boe": [
+   "Catedráticos de Enseñanza Secundaria"
+  ],
   "normas": [
    "constitucion",
    "loe",
@@ -5976,7 +6055,9 @@
   "area": "Administración General del Estado",
   "ambito": "Estado",
   "grupo": "A1",
-  "boe": [],
+  "boe": [
+   "Letrados de las Cortes Generales"
+  ],
   "normas": [
    "constitucion"
   ],
@@ -6001,7 +6082,9 @@
   "area": "Administración General del Estado",
   "ambito": "Estado",
   "grupo": "C1",
-  "boe": [],
+  "boe": [
+   "Técnicos-Administrativos de las Cortes Generales"
+  ],
   "normas": [
    "constitucion"
   ],
