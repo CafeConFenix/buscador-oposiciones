@@ -9,16 +9,6 @@ Web gratuita en español para buscar la oposición que preparas y encontrar, en 
 
 Es una web estática (HTML, CSS y JavaScript sin dependencias) que se publica en **GitHub Pages**, gratis. Un robot de GitHub Actions descarga los datos del BOE cada día.
 
-## Publicarla (una sola vez)
-
-1. Crea un repositorio nuevo en GitHub (por ejemplo `oposiciones`) y sube todo este proyecto a la rama `main`.
-2. En el repositorio: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. En **Settings → Actions → General → Workflow permissions**, marca **Read and write permissions**.
-4. Ve a la pestaña **Actions**, elige **Actualizar datos del BOE** y pulsa **Run workflow**. La primera vez rellena unos 6 meses de convocatorias y descarga las normas (tarda unos minutos).
-5. Al terminar, el propio robot lanza **Publicar la web**. Tu web quedará en `https://TU-USUARIO.github.io/oposiciones/`.
-
-A partir de ahí el robot se ejecuta cada mañana sin que hagas nada.
-
 ## Qué está comprobado y qué no
 
 - La lógica (lectura del sumario del BOE, extracción de convocatorias, plazos, tasas, fechas de examen, búsqueda, calendario, `.ics`) tiene tests automáticos: `python -m pytest` y `npm test`.
