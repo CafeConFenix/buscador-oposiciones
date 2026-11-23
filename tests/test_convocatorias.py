@@ -76,3 +76,26 @@ def test_reconoce_la_seccion_por_su_nombre_aunque_cambie_el_codigo():
         }
     }
     assert [c.id for c in extraer_convocatorias(sumario)] == ["BOE-A-2026-1"]
+
+
+def test_sumario_real_con_fecha_en_metadatos_fecha(cargar_json):
+    """La documentación oficial da la fecha como `fecha` y como `fecha_publicacion`: se aceptan las dos."""
+    items = extraer_convocatorias(cargar_json("sumario_20261119_real.json"))
+    assert {c.id for c in items} == {"BOE-A-2026-24215", "BOE-A-2026-24217", "BOE-A-2026-24223"}
+    assert {c.fecha for c in items} == {"2026-11-19"}
+
+
+def test_si_el_sumario_no_trae_fecha_se_usa_la_del_dia_pedido(cargar_json):
+    sumario = cargar_json("sumario_20261119_real.json")
+    sumario["data"]["sumario"]["metadatos"] = {"publicacion": "BOE"}
+    items = extraer_convocatorias(sumario, fecha="2026-11-19")
+    assert items and {c.fecha for c in items} == {"2026-11-19"}
+
+
+def test_titulos_reales_se_clasifican_bien():
+    corregir = "Resolución de 12 de noviembre de 2026, de la Subsecretaría, por la que se corrigen errores en la de 19 de octubre de 2026, por la que se convoca concurso para la provisión de puestos de trabajo en el Organismo Estatal Inspección de Trabajo y Seguridad Social."
+    assert clasificar_titulo(corregir) == "correccion"
+    local = "Resolución de 5 de noviembre de 2026, del Ayuntamiento de Burgos, referente a la convocatoria para proveer varias plazas."
+    assert clasificar_titulo(local) == "convocatoria"
+    admitidos = "Resolución de 30 de octubre de 2026, de la Presidencia de la Agencia Estatal de Administración Tributaria, por la que se aprueba la relación provisional de personas admitidas y excluidas y se anuncia fecha, hora y lugar de celebración del ejercicio único del proceso selectivo"
+    assert clasificar_titulo(admitidos) == "admitidos"

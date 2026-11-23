@@ -64,9 +64,36 @@ def _nombre_local(etiqueta: str) -> str:
     return etiqueta.rsplit("}", 1)[-1]
 
 
+_DECLARACION = re.compile(rb"^\s*<\?xml[^>]*\?>", re.IGNORECASE)
+
+
+def _normalizar_codificacion(cuerpo: bytes) -> bytes:
+    """Muchos boletines declaran ISO-8859-1 y sirven UTF-8 (o al revés). Manda el contenido, no la declaración."""
+    for codificacion in ("utf-8", "cp1252"):
+        try:
+            texto = cuerpo.decode(codificacion)
+            break
+        except UnicodeDecodeError:
+            continue
+    else:
+        return cuerpo
+    sin_declaracion = _DECLARACION.sub(b"", texto.encode("utf-8"), count=1)
+    return b'<?xml version="1.0" encoding="utf-8"?>' + sin_declaracion
+
+
+def reparar_texto(texto: str) -> str:
+    """Deshace el 'ResoluciÃ³n' típico de UTF-8 leído como Latin-1; si no hace falta, devuelve el texto igual."""
+    if not any(marca in texto for marca in ("Ã", "Â")):
+        return texto
+    try:
+        return texto.encode("cp1252").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return texto
+
+
 def leer_feed(cuerpo: bytes) -> list[dict]:
     try:
-        raiz = ET.fromstring(cuerpo)
+        raiz = ET.fromstring(_normalizar_codificacion(cuerpo))
     except ET.ParseError:
         return []
     items: list[dict] = []
@@ -94,6 +121,9 @@ def es_de_oposiciones(titulo: str) -> bool:
 
 def _feeds_de(abrir, comunidad: dict) -> list[str]:
     encontrados: list[str] = []
+    fijos = list(comunidad.get("feeds_oposiciones", []))
+    if fijos:
+        return fijos  # verificados a mano: ya son la sección de oposiciones del boletín
     for url in (comunidad["boletin"]["url"], comunidad.get("empleo", "")):
         if not url:
             continue
@@ -106,6 +136,8 @@ def _feeds_de(abrir, comunidad: dict) -> list[str]:
 
 def actualizar_autonomicas(abrir, comunidades: list[dict], destino: Path, hoy: date) -> dict:
     existentes = json.loads(destino.read_text("utf-8")) if destino.exists() else []
+    for c in existentes:
+        c["titulo"] = reparar_texto(c.get("titulo", ""))
     por_id = {c["id"]: c for c in existentes}
     resumen = {"comunidades_con_fuente": 0, "sin_fuente": 0, "anuncios": 0, "con_error": 0}
     for comunidad in comunidades:
@@ -126,7 +158,7 @@ def actualizar_autonomicas(abrir, comunidades: list[dict], destino: Path, hoy: d
                 if estado != 200:
                     raise OSError(f"respondió {estado}")
                 for item in leer_feed(cuerpo):
-                    if not es_de_oposiciones(item["titulo"]):
+                    if url not in comunidad.get("feeds_oposiciones", []) and not es_de_oposiciones(item["titulo"]):
                         continue
                     tipo = clasificar_titulo(item["titulo"])
                     registro = {

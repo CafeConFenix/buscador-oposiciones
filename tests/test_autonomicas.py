@@ -66,3 +66,57 @@ def test_actualiza_por_comunidad_y_tolera_fallos(tmp_path, abrir_falso):
     # una segunda pasada no duplica
     actualizar_autonomicas(abrir, comunidades, destino, date(2026, 11, 17))
     assert len(json.loads(destino.read_text("utf-8"))) == 1
+
+
+def test_feed_que_declara_latin1_pero_sirve_utf8_no_rompe_las_tildes():
+    from oposiciones.autonomicas import leer_feed
+
+    cuerpo = (
+        '<?xml version="1.0" encoding="ISO-8859-1"?><rss version="2.0"><channel><item>'
+        "<title>Resolución de la Dirección General de Función Pública, proceso selectivo</title>"
+        "<link>https://doe.juntaex.es/a</link><pubDate>Thu, 19 Nov 2026 10:00:00 +0100</pubDate></item></channel></rss>"
+    ).encode("utf-8")
+    assert leer_feed(cuerpo)[0]["titulo"] == "Resolución de la Dirección General de Función Pública, proceso selectivo"
+
+
+def test_feed_realmente_latin1_tambien_se_lee_bien():
+    from oposiciones.autonomicas import leer_feed
+
+    cuerpo = (
+        '<?xml version="1.0" encoding="ISO-8859-1"?><rss><channel><item><title>Oposición de Educación</title>'
+        "<link>https://x.es/a</link></item></channel></rss>"
+    ).encode("latin-1")
+    assert leer_feed(cuerpo)[0]["titulo"] == "Oposición de Educación"
+
+
+def test_se_reparan_los_textos_ya_guardados_con_la_codificacion_rota(tmp_path):
+    import json
+    from datetime import date
+    from oposiciones.autonomicas import actualizar_autonomicas
+
+    destino = tmp_path / "ccaa.json"
+    destino.write_text(json.dumps([{"id": "ccaa-1", "fecha": "2026-11-19", "titulo": "ResoluciÃ³n de la DirecciÃ³n General", "organismo": "Extremadura", "tipo": "convocatoria", "url_html": "u", "fecha_examen": None, "fuente": "boletín autonómico"}]), "utf-8")
+    actualizar_autonomicas(lambda u, a: (404, b""), [], destino, date(2026, 11, 20))
+    assert json.loads(destino.read_text("utf-8"))[0]["titulo"] == "Resolución de la Dirección General"
+
+
+def test_un_feed_fijo_de_la_seccion_de_oposiciones_se_lee_sin_filtrar_por_palabras(tmp_path):
+    import json
+    from datetime import date
+    from oposiciones.autonomicas import actualizar_autonomicas
+
+    feed = (
+        '<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><entry>'
+        "<title>Resolución de 10 de noviembre de 2026, de la Dirección General de Recursos Humanos, por la que se anuncia la lista definitiva</title>"
+        '<link href="https://www.juntadeandalucia.es/boja/2026/1/2"/><updated>2026-11-19T08:00:00Z</updated></entry></feed>'
+    ).encode()
+
+    def abrir(url, accept):
+        return (200, feed) if url.endswith("s53.xml") else (404, b"")
+
+    comunidades = [{"id": "andalucia", "nombre": "Andalucía", "boletin": {"nombre": "BOJA", "url": "https://x.es/boja"},
+                    "feeds_oposiciones": ["https://www.juntadeandalucia.es/boja/distribucion/s53.xml"]}]
+    destino = tmp_path / "ccaa.json"
+    resumen = actualizar_autonomicas(abrir, comunidades, destino, date(2026, 11, 20))
+    datos = json.loads(destino.read_text("utf-8"))
+    assert resumen["anuncios"] == 1 and datos[0]["organismo"] == "Andalucía" and datos[0]["fecha"] == "2026-11-19"

@@ -120,3 +120,85 @@ def test_las_convocatorias_guardan_plazo_fin_de_plazo_y_tasa(abrir_falso, cargar
     assert conv["plazo"] == "20 días hábiles"
     assert conv["fin_plazo"] == "2026-12-11"  # publicada el viernes 13-11
     assert conv["tasa"] == 12.38
+
+
+def test_las_convocatorias_no_se_pierden_aunque_el_sumario_no_traiga_fecha(cargar_json):
+    """Causa raíz del calendario vacío: sin fecha, el filtro de antigüedad descartaba todo."""
+    from datetime import date
+    from oposiciones.actualizar import actualizar_convocatorias
+    from oposiciones.boe_client import BoeClient
+    import json
+
+    sumario = cargar_json("sumario_20261119_real.json")
+    sumario["data"]["sumario"]["metadatos"] = {"publicacion": "BOE"}
+
+    def abrir(url, accept):
+        if url.endswith("/20261119"):
+            return 200, json.dumps(sumario).encode()
+        if "sumario" in url:
+            return 404, b""
+        return 200, b"<documento><texto><p>Sin datos</p></texto></documento>"
+
+    resultado = actualizar_convocatorias(BoeClient(abrir), date(2026, 11, 19), 3, [])
+    assert {c["id"] for c in resultado} >= {"BOE-A-2026-24215", "BOE-A-2026-24217", "BOE-A-2026-24223"}
+    assert all(c["fecha"] == "2026-11-19" for c in resultado)
+
+
+def _abrir_con(sumarios: dict, error_en=()):
+    import json
+
+    def abrir(url, accept):
+        for fin, cuerpo in sumarios.items():
+            if url.endswith("/" + fin):
+                return 200, cuerpo if isinstance(cuerpo, bytes) else json.dumps(cuerpo).encode()
+        for fin in error_en:
+            if url.endswith("/" + fin):
+                return 500, b"error"
+        if "/sumario/" in url:
+            return 404, b""
+        return 200, b"<documento><texto><p>x</p></texto></documento>"
+
+    return abrir
+
+
+def test_un_dia_con_error_no_impide_los_demas_ni_borra_lo_guardado(cargar_json):
+    from datetime import date
+    from oposiciones.actualizar import actualizar_convocatorias
+    from oposiciones.boe_client import BoeClient
+
+    previo = {"id": "BOE-A-2026-1", "fecha": "2026-11-10", "titulo": "antigua", "organismo": "X", "tipo": "otros", "fecha_examen": None}
+    abrir = _abrir_con({"20261119": cargar_json("sumario_20261119_real.json")}, error_en=("20261118",))
+    res = actualizar_convocatorias(BoeClient(abrir), date(2026, 11, 19), 3, [previo])
+    ids = {c["id"] for c in res}
+    assert "BOE-A-2026-1" in ids and "BOE-A-2026-24217" in ids
+
+
+def test_si_todos_los_dias_fallan_el_proceso_falla_de_forma_visible():
+    import pytest
+    from datetime import date
+    from oposiciones.actualizar import actualizar_convocatorias
+    from oposiciones.boe_client import BoeClient, ErrorBoe
+
+    abrir = _abrir_con({}, error_en=("20261119", "20261118", "20261117"))
+    with pytest.raises(ErrorBoe, match="ningún sumario"):
+        actualizar_convocatorias(BoeClient(abrir), date(2026, 11, 19), 3, [])
+
+
+def test_si_el_boe_responde_pero_no_se_extrae_nada_varios_dias_laborables_falla():
+    import pytest
+    from datetime import date
+    from oposiciones.actualizar import actualizar_convocatorias
+    from oposiciones.boe_client import BoeClient, ErrorBoe
+
+    vacio = {"status": {"code": "200"}, "data": {"sumario": {"metadatos": {"fecha_publicacion": "x"}, "diario": [{"seccion": [{"codigo": "1", "nombre": "I", "departamento": []}]}]}}}
+    abrir = _abrir_con({"20261119": vacio, "20261118": vacio, "20261117": vacio})  # jueves, miércoles, martes
+    with pytest.raises(ErrorBoe, match="cero convocatorias"):
+        actualizar_convocatorias(BoeClient(abrir), date(2026, 11, 19), 3, [])
+
+
+def test_un_fin_de_semana_sin_boe_o_sin_convocatorias_no_cuenta_como_fallo():
+    from datetime import date
+    from oposiciones.actualizar import actualizar_convocatorias
+    from oposiciones.boe_client import BoeClient
+
+    assert actualizar_convocatorias(BoeClient(_abrir_con({})), date(2026, 11, 22), 3, []) == []  # todo 404

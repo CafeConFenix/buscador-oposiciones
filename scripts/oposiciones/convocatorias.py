@@ -27,26 +27,27 @@ class Convocatoria:
 def clasificar_titulo(titulo: str) -> str:
     """Devuelve convocatoria | admitidos | resultado | concurso | correccion | otros."""
     t = titulo.lower()
-    if t.startswith("corrección de errores") or t.startswith("correccion de errores"):
+    if t.startswith(("corrección de errores", "correccion de errores")) or "se corrigen errores" in t or "se corrige error" in t:
         return "correccion"
     if "concurso" in t and ("provisión de puestos" in t or "libre designación" in t or "traslados" in t):
         return "concurso"
     if "admitidos y excluidos" in t or "admitidas y excluidas" in t:
         return "admitidos"
-    if "se convoca" in t or "se convocan" in t:
+    if "se convoca" in t or "se convocan" in t or "referente a la convocatoria" in t:
         return "convocatoria"
     if "relación de aprobados" in t or "relación de personas aprobadas" in t or "aspirantes que han superado" in t:
         return "resultado"
     return "otros"
 
 
-def extraer_convocatorias(sumario: dict | None) -> list[Convocatoria]:
+def extraer_convocatorias(sumario: dict | None, fecha: str = "") -> list[Convocatoria]:
+    """`fecha` (AAAA-MM-DD) es la del día pedido: se usa si el sumario no trae una fecha reconocible."""
     if not sumario:
         return []
     datos = (sumario.get("data") or {}).get("sumario")
     if not datos:
         return []
-    fecha = _fecha_iso(datos.get("metadatos", {}).get("fecha_publicacion", ""))
+    fecha = _fecha_del_sumario(datos) or fecha
     resultado: list[Convocatoria] = []
     for diario in _como_lista(datos.get("diario")):
         for seccion in _como_lista(diario.get("seccion")):
@@ -91,3 +92,13 @@ def _como_lista(valor) -> list:
 
 def _fecha_iso(aaaammdd: str) -> str:
     return f"{aaaammdd[:4]}-{aaaammdd[4:6]}-{aaaammdd[6:8]}" if len(aaaammdd) == 8 else ""
+
+
+def _fecha_del_sumario(datos: dict) -> str:
+    """La documentación del BOE nombra la fecha `fecha_publicacion` en unos sitios y `fecha` en otros."""
+    metadatos = datos.get("metadatos") or {}
+    for clave in ("fecha_publicacion", "fecha"):
+        valor = str(metadatos.get(clave, "")).replace("-", "")
+        if len(valor) == 8 and valor.isdigit():
+            return _fecha_iso(valor)
+    return ""

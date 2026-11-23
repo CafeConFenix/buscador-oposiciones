@@ -112,3 +112,10 @@ test("reconoce cuándo la consulta es un número de artículo", async () => {
   for (const q of ["14", "art 14", "Art. 14 bis", "artículo 135"]) assert.equal(esConsultaDeArticulo(q), true, q);
   for (const q of ["igualdad", "art", "ley 39", "14 plazos"]) assert.equal(esConsultaDeArticulo(q), false, q);
 });
+
+import { repararTexto } from "../../site/js/busqueda.js";
+
+test("repara el texto UTF-8 leído como Latin-1 y respeta el que ya está bien", () => {
+  assert.equal(repararTexto("ResoluciÃ³n de la DirecciÃ³n General de FunciÃ³n PÃºblica"), "Resolución de la Dirección General de Función Pública");
+  assert.equal(repararTexto("Resolución con Ñ y Ã de verdad: ÁÉÍ"), "Resolución con Ñ y Ã de verdad: ÁÉÍ");
+});

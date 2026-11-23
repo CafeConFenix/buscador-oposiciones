@@ -1,0 +1,4 @@
+sumario_20261119_real.json: ids, organismos, epígrafes y secciones tomados del sumario real del BOE del 19/11/2026
+(https://www.boe.es/boe/dias/2026/11/19/). El título de BOE-A-2026-24215 es literal; los demás están abreviados
+respecto al original. La estructura JSON sigue la documentación oficial (APIsumarioBOE.pdf), incluida la variante
+documentada de la fecha: metadatos.fecha en vez de metadatos.fecha_publicacion.

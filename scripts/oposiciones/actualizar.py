@@ -26,15 +26,30 @@ from .normas import comprobar_titulo, construir_norma, necesita_actualizar
 
 DATOS = Path(__file__).resolve().parents[2] / "site" / "data"
 PRIMERA_CARGA_DIAS = 180
+MIN_DIAS_VACIOS_PARA_FALLAR = 3  # días laborables seguidos con sumario pero sin ninguna convocatoria II.B
 
 
 def actualizar_convocatorias(
     cliente: BoeClient, hoy: date, dias: int, existentes: list[dict], conservar_dias: int = 400
 ) -> list[dict]:
     por_id = {c["id"]: c for c in existentes}
+    con_sumario = errores = laborables_vacios = extraidas = 0
     for atras in range(dias):
         dia = hoy - timedelta(days=atras)
-        for conv in extraer_convocatorias(cliente.sumario(dia.isoformat())):
+        try:
+            sumario = cliente.sumario(dia.isoformat())
+        except Exception as error:  # noqa: BLE001 - un día con error de red o de formato no debe borrar ni parar el resto
+            print(f"  aviso: sumario del {dia} no disponible: {error}", file=sys.stderr)
+            errores += 1
+            continue
+        if sumario is None:
+            continue  # ese día no hay BOE
+        con_sumario += 1
+        del_dia = extraer_convocatorias(sumario, fecha=dia.isoformat())
+        extraidas += len(del_dia)
+        if not del_dia and dia.weekday() < 5:
+            laborables_vacios += 1
+        for conv in del_dia:
             if conv.id in por_id and "fecha_examen" in por_id[conv.id]:
                 por_id[conv.id].update(titulo=conv.titulo)  # el BOE es la fuente de verdad
                 if conv.tipo == "convocatoria" and "plazo_leido" not in por_id[conv.id]:
@@ -45,6 +60,13 @@ def actualizar_convocatorias(
             if conv.tipo == "convocatoria":
                 registro.update(_leer_plazos(cliente, conv))
             por_id[conv.id] = registro
+    if errores and not con_sumario:
+        raise ErrorBoe(f"No se pudo leer ningún sumario del BOE ({errores} días con error)")
+    if extraidas == 0 and laborables_vacios >= MIN_DIAS_VACIOS_PARA_FALLAR:
+        raise ErrorBoe(
+            f"El BOE respondió en {laborables_vacios} días laborables pero se extrajeron cero convocatorias: "
+            "probablemente ha cambiado el formato del sumario"
+        )
     limite = (hoy - timedelta(days=conservar_dias)).isoformat()
     vigentes = [c for c in por_id.values() if c["fecha"] >= limite]
     return sorted(vigentes, key=lambda c: (c["fecha"], c["id"]), reverse=True)
@@ -150,6 +172,7 @@ def _todas_las_urls() -> list[str]:
     for op in json.loads((DATOS / "oposiciones.json").read_text("utf-8")):
         urls.update(e["url"] for e in op.get("enlaces", []))
         urls.update(r["url"] for r in op.get("recursos", []) if "url" in r)
+        urls.update(x["url"] for x in op.get("examenes", []) if "url" in x)
     rec = json.loads((DATOS / "recursos.json").read_text("utf-8"))
     for c in rec["comunidades"]:
         urls.update([c["boletin"]["url"], c["empleo"], c["sanidad"]["url"], c["educacion"]])
@@ -205,7 +228,11 @@ def main(argv: list[str] | None = None) -> int:
         existentes = json.loads(archivo.read_text("utf-8")) if archivo.exists() else []
         dias = args.dias if existentes else max(args.dias, PRIMERA_CARGA_DIAS)  # primera vez: rellenar hacia atrás
         hoy = date.today()
-        nuevas = actualizar_convocatorias(cliente, hoy, dias, existentes)
+        try:
+            nuevas = actualizar_convocatorias(cliente, hoy, dias, existentes)
+        except ErrorBoe as error:
+            print(f"ERROR: {error}. Se conservan los datos anteriores.", file=sys.stderr)
+            return 1
         archivo.write_text(json.dumps(nuevas, ensure_ascii=False, indent=1), "utf-8")
         _escribir_salidas(nuevas, hoy)
         print(f"{len(nuevas)} anuncios guardados ({dias} días revisados)")

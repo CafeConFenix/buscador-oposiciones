@@ -38,3 +38,23 @@ def test_las_oposiciones_con_recursos_los_tienen_bien_formados():
             assert r["titulo"] and r["url"].startswith("https://") and r["tipo"] and r["fuente"], o["id"]
         urls = [r["url"] for r in o["recursos"]]
         assert len(urls) == len(set(urls)), o["id"]
+
+
+DOMINIOS_OFICIALES = ("inap.es", "guardiacivil.es", "mjusticia.gob.es", "policia.es", "interior.gob.es", "boe.es", "administracion.gob.es")
+
+
+def test_los_examenes_anteriores_son_enlaces_a_fuentes_oficiales():
+    con_examenes = [o for o in _cargar("oposiciones.json") if o.get("examenes")]
+    assert len(con_examenes) >= 6
+    for o in con_examenes:
+        for e in o["examenes"]:
+            host = e["url"].split("/")[2]
+            assert e["titulo"] and e["url"].startswith("https://"), o["id"]
+            assert host.endswith(DOMINIOS_OFICIALES), (o["id"], host)
+
+
+def test_el_comprobador_de_enlaces_revisa_tambien_los_examenes():
+    from oposiciones.actualizar import _todas_las_urls
+
+    urls = set(_todas_las_urls())
+    assert all(e["url"] in urls for o in _cargar("oposiciones.json") for e in o.get("examenes", []))
