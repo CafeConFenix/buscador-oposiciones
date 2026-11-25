@@ -1,5 +1,75 @@
 [
  {
+  "id": "ccaa-c2c9629d82c3",
+  "fecha": "2026-11-25",
+  "titulo": "Resolución de 19 de noviembre de 2026, del Rectorado de la Universidad de Almería, por la que se convoca concurso de acceso a plazas de Cuerpos Docentes Universitarios mediante promoción interna.",
+  "organismo": "Andalucía",
+  "tipo": "convocatoria",
+  "url_html": "http://www.juntadeandalucia.es/boja/2026/228/23.html",
+  "fecha_examen": null,
+  "fuente": "boletín autonómico"
+ },
+ {
+  "id": "ccaa-b0e51be802a0",
+  "fecha": "2026-11-25",
+  "titulo": "Resolución de 20 de noviembre de 2026, de la Dirección General de Recursos Humanos y Función Pública, por la que se ofertan vacantes al personal aspirante seleccionado en el proceso selectivo de promoción interna para el ingreso en el Cuerpo Administrativo, en el ámbito de la Administración General de la Junta de Andalucía, correspondiente a la Oferta de Empleo Público 2025.",
+  "organismo": "Andalucía",
+  "tipo": "convocatoria",
+  "url_html": "http://www.juntadeandalucia.es/boja/2026/228/21.html",
+  "fecha_examen": null,
+  "fuente": "boletín autonómico"
+ },
+ {
+  "id": "ccaa-a84d6943ebe0",
+  "fecha": "2026-11-25",
+  "titulo": "Resolución de 13 de noviembre de 2026, del Rectorado de la Universidad de Almería, por la que se convoca concurso de acceso a plazas de Cuerpos de Docentes Universitarios.",
+  "organismo": "Andalucía",
+  "tipo": "convocatoria",
+  "url_html": "http://www.juntadeandalucia.es/boja/2026/228/22.html",
+  "fecha_examen": null,
+  "fuente": "boletín autonómico"
+ },
+ {
+  "id": "ccaa-4a186dffe95d",
+  "fecha": "2026-11-25",
+  "titulo": "Resolución de 20 de noviembre de 2026, de la Dirección General de Personal del Servicio Andaluz de Salud, por la que se convoca, mediante el sistema de concurso de méritos, la cobertura del puesto de cargo intermedio de Jefe/a de Sección Facultativo de Obstetricia y Ginecología en el Hospital Universitario de Puerto Real (Cádiz).",
+  "organismo": "Andalucía",
+  "tipo": "convocatoria",
+  "url_html": "http://www.juntadeandalucia.es/boja/2026/228/19.html",
+  "fecha_examen": null,
+  "fuente": "boletín autonómico"
+ },
+ {
+  "id": "ccaa-45030c935d53",
+  "fecha": "2026-11-25",
+  "titulo": "Resolución de 18 de noviembre de 2026, de la Dirección General de Recursos Humanos, por la que se aprueba la relación de plazas que se ofertan y se establece el procedimiento para la elección de las mismas por los aspirantes que han superado el proceso selectivo en la especialidad de Análisis Clínicos, convocado por Resolución de 19 de diciembre de 2024 para el acceso a la condición de personal estatutario fijo en la categoría de Facultativo Especialista de Área, en las instituciones sanitarias del Servicio Extremeño de Salud.",
+  "organismo": "Extremadura",
+  "tipo": "resultado",
+  "url_html": "http://doe.juntaex.es/pdfs/doe/2026/2270o/26063003.pdf",
+  "fecha_examen": null,
+  "fuente": "boletín autonómico"
+ },
+ {
+  "id": "ccaa-247dda6a7b92",
+  "fecha": "2026-11-25",
+  "titulo": "Corrección de errores de la Orden de 9 de octubre de 2026 por la que se nombran los miembros de los Tribunales de Selección de las pruebas selectivas convocadas por Órdenes de 23 de diciembre de 2024 y Órdenes de 17 de diciembre de 2025 para el acceso a plazas vacantes de personal laboral de la Administración de la Comunidad Autónoma de Extremadura.&#13;&#10;&#13;&#10;",
+  "organismo": "Extremadura",
+  "tipo": "correccion",
+  "url_html": "http://doe.juntaex.es/pdfs/doe/2026/2270o/26050136.pdf",
+  "fecha_examen": null,
+  "fuente": "boletín autonómico"
+ },
+ {
+  "id": "ccaa-236104b63d2d",
+  "fecha": "2026-11-25",
+  "titulo": "Resolución de 20 de noviembre de 2026, de la Dirección General de Personal del Servicio Andaluz de Salud, por la que se convoca mediante el sistema de concurso de méritos la cobertura de cargo intermedio de Coordinador/a Cuidados de Enfermería de Salud Mental en el Área de Gestión Sanitaria Nordeste de Jaén (Jaén).",
+  "organismo": "Andalucía",
+  "tipo": "convocatoria",
+  "url_html": "http://www.juntadeandalucia.es/boja/2026/228/20.html",
+  "fecha_examen": null,
+  "fuente": "boletín autonómico"
+ },
+ {
   "id": "ccaa-fcc0ea854065",
   "fecha": "2026-11-24",
   "titulo": "Resolución de 16 de noviembre de 2026, de la Universidad de Almería, por la que se anuncia convocatoria pública para la provisión del puesto de trabajo Director/a del Área de Gestión Académica y Apoyo al Estudiante por el sistema de libre designación.",
